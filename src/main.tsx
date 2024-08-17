@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 // import App from './App.tsx'
 import './index.css'
 import {
-  createBrowserRouter,
+createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 import NavigationHeader from './components/NavigationHeader.tsx';
@@ -15,7 +15,7 @@ import ErrorPage from "./error-page";
 
 const allowedTypes = ['snippets', 'animations'];
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     Component: List,

@@ -1,0 +1,13 @@
+{
+    "name": "Spring Button",
+    "hint": "Click on button!",
+    "slug": "spring-button",
+    "category": "Button",
+    "tags": [
+        "Round"
+    ],
+    "css": "\n      .ezy-spring-button {\n        /* Variables */\n       --button_radius: 0.75em;\n       --button_color: #e8e8e8;\n       --button_outline_color: #000000;\n       font-size: 17px;\n       font-weight: bold;\n       border-bottom: 2px solid  var(--button_color);\n       border-radius: var(--button_radius);\n       background: var(--button_outline_color);\n      }\n      \n      .ezy-spring-button .button_top {\n       display: block;\n       box-sizing: border-box;\n       border: 2px solid var(--button_outline_color);\n       border-radius: var(--button_radius);\n       padding: 0.75em 1.5em;\n       background: var(--button_color);\n       color: var(--button_outline_color);\n       transform: translateY(-0.2em);\n       transition: transform 0.1s ease;\n      }\n      \n      .ezy-spring-button:hover .button_top {\n        /* Pull the button upwards when hovered */\n       transform: translateY(-0.33em);\n      }\n      \n      .ezy-spring-button:active .button_top {\n        /* Push the button downwards when pressed */\n       transform: translateY(0);\n      }\n\n              ",
+    "html": "\n      <button class=\"ezy-spring-button\">\n      <span class=\"button_top\"> Button\n      </span>\n    </button>\n              ",
+    "hiddenStyle": "",
+    "js": ""
+}

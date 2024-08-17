@@ -1,0 +1,7 @@
+{
+    "name": "Example Snippet",
+    "html": "<div>Hello, world!</div>",
+    "css": "div { color: blue; }",
+    "js": "console.log('Snippet loaded');",
+    "hiddenStyle": ""
+}

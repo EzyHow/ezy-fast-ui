@@ -1,23 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { snippets } from '../../data/snippets';
 import { CodeSnippetData } from '../../types';
 import CodeViewer from '../../components/CodeViewer';
 import CodeSnippetViewer from '../../components/CodeSnippetViewer';
+import { animations } from '../../data/animations';
 
 const SnippetShow = () => {
-    const { slug } = useParams(); // Extract snippet from URL params
+    const { type, slug } = useParams();
     const [selected, setSelected] = useState<CodeSnippetData | null>(null);
 
     useEffect(() => {
-        if (snippets && snippets.length > 0) {
+        let tempArray = [];
+        if (type === 'animations') {
+            tempArray = animations;
+        } else {
+            tempArray = snippets;
+        }
+        if (tempArray && tempArray.length > 0) {
             console.log('sdf => ', slug);
             if (slug) {
-                const foundSnippet = snippets.find((sn) => sn.slug === slug);
+                const foundSnippet = tempArray.find((sn) => sn.slug === slug);
                 setSelected(foundSnippet || null);
             }
         }
-    }, [slug, snippets]);
+    }, [slug, snippets, animations, type]);
+
 
     return (
         <div className="mt-5">
@@ -27,7 +35,7 @@ const SnippetShow = () => {
                         <>
                             <div className="flex justify-start items-center">
                                 <a
-                                    href="/snippets"
+                                    href={`/list/${type}`}
                                     className="flex justify-start items-center text-sm text-orange-200 active:translate-y-0.5 hover:text-white ml-2 animate-pulse"
                                 >
                                     <svg

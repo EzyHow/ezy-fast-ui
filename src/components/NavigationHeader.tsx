@@ -65,11 +65,11 @@ export default function NavigationHeader() {
                                 className="flex flex-col  capitalize text-gray-300 lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center"
                             >
                                 <a
-                                    href="/animation"
+                                    href="/list/animations"
                                     className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-200"
                                 >Animations</a>
                                 <a
-                                    href="/snippets"
+                                    href="/list/snippets"
                                     className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-200"
                                 >Snippets</a>
                                 <a

@@ -1,26 +1,30 @@
 
 import React, { useState, useEffect } from 'react';
-import Categories, { CodeSnippetData } from '../../types';
+import { CodeSnippetCategories, AnimationCategories } from '../../types';
 import CodeSnippetViewer from '../../components/CodeSnippetViewer';
 import { snippets } from '../../data/snippets';
+import { useParams } from 'react-router-dom';
+import { animations } from '../../data/animations';
 
 
 const SnippetList: React.FC = () => {
-    const [selectedSnippet, setSelectedSnippet] = useState<CodeSnippetData | null>(null);
+    const { type } = useParams();
 
-    const [categoryFilter, setCategoryFilter] = useState<any | null>(null);
+    // const [categoryFilter, setCategoryFilter] = useState<any | null>(null);
     const [selectedCategories, setSelectedCategories] = useState<Set<string>>(new Set());
-    const [filteredSnippets, setFilteredSnippets] = useState(snippets);
+    const [filteredSnippets, setFilteredSnippets] = useState(type == 'animations' ? animations : snippets);
 
-    const categories = Categories;
+    const categories = type == 'animations' ? AnimationCategories : CodeSnippetCategories;
 
     useEffect(() => {
         if (selectedCategories.size === 0) {
-            setFilteredSnippets(snippets);
+            setFilteredSnippets(type == 'animations' ? animations : snippets);
         } else {
-            setFilteredSnippets(
-                snippets.filter((snippet) => selectedCategories.has(snippet.category))
-            );
+            if (type == 'animations') {
+                setFilteredSnippets(animations.filter((animation) => selectedCategories.has(animation.category)));
+            } else {
+                setFilteredSnippets(snippets.filter((snippet) => selectedCategories.has(snippet.category)));
+            }
         }
     }, [selectedCategories]);
 
@@ -44,7 +48,7 @@ const SnippetList: React.FC = () => {
         <section>
             <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
                 <header>
-                    <h2 className="text-xl font-bold text-white sm:text-3xl">Ezy Fast UI Snippet Collection</h2>
+                    <h2 className="text-xl font-bold text-white sm:text-3xl">Ezy Fast UI {type == 'animations' ? 'Animations' : 'Snippets'} Collection</h2>
                     <p className="max-w-md mt-4 text-gray-200">Available for personal and commercial use.</p>
                 </header>
 
@@ -54,11 +58,11 @@ const SnippetList: React.FC = () => {
                             <details className="group">
                                 <summary
                                     className="flex items-center gap-2 pb-1 text-gray-100 transition border-b border-gray-400 cursor-pointer hover:border-gray-600"
-                                    onClick={() => {
-                                        if (categoryFilter) {
-                                            categoryFilter.removeAttribute('open');
-                                        }
-                                    }}
+                                // onClick={() => {
+                                //     if (categoryFilter) {
+                                //         categoryFilter.removeAttribute('open');
+                                //     }
+                                // }}
                                 >
                                     <span className="text-sm font-medium">Category</span>
                                     <span className="transition group-open:-rotate-180">
@@ -133,7 +137,7 @@ const SnippetList: React.FC = () => {
                     {filteredSnippets.map((snippet, index) => (<div className="relative">
                         <CodeSnippetViewer key={index} snippet={snippet} isCollectionView={true} />
                         <a
-                            href={`/snippets/${snippet.slug}`}
+                            href={`/${type}/${snippet.slug}`}
                             className="block transition-colors duration-300 overflow-hidden group absolute bottom-3 right-4 text-orange-200 active:translate-y-0.5 hover:text-white"
                         >
                             <svg

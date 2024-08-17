@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
+// import App from './App.tsx'
 import './index.css'
 import {
   createBrowserRouter,
@@ -10,18 +10,35 @@ import NavigationHeader from './components/NavigationHeader.tsx';
 import SnippetList from './pages/snippets/SnippetList.tsx';
 import About from './pages/about/About.tsx';
 import SnippetShow from './pages/snippets/SnippetShow.tsx';
+import List from './pages/snippets/List.tsx';
+import ErrorPage from "./error-page";
+
+const allowedTypes = ['snippets', 'animations'];
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    Component: List,
+    errorElement: <ErrorPage />,
   },
   {
-    path: "/snippets",
-    Component: SnippetList
+    path: "/list",
+    Component: List
   },
   {
-    path: "/snippets/:slug",
+    path: "/list/:type",
+    Component: SnippetList,
+    loader: ({ params }) => {
+      const { type } = params;
+      if (allowedTypes.includes(type as string)) {
+        return null; // No special data needed, just pass through
+      } else {
+        throw new Response('Not Found', { status: 404 }); // Force a 404 error
+      }
+    }
+  },
+  {
+    path: "/:type/:slug",
     Component: SnippetShow
   },
   {

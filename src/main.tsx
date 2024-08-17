@@ -7,7 +7,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import NavigationHeader from './components/NavigationHeader.tsx';
-import SnippetList from './snippets/index.tsx';
+import SnippetList from './pages/snippets/SnippetList.tsx';
+import About from './pages/about/About.tsx';
+import SnippetShow from './pages/snippets/SnippetShow.tsx';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
   {
     path: "/snippets",
     Component: SnippetList
+  },
+  {
+    path: "/snippets/:slug",
+    Component: SnippetShow
+  },
+  {
+    path: "/about",
+    Component: About
   }
 ]);
 

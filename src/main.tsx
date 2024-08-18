@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import NavigationHeader from './components/NavigationHeader.tsx';
 import App from './App.tsx';
+import Footer from './components/Footer.tsx';
 
 
 
@@ -14,9 +15,10 @@ createRoot(document.getElementById('root')!).render(
     <div className="w-full h-screen overflow-auto bg-slate-700 text-white">
       <HashRouter>
         <NavigationHeader />
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto min-h-[calc(100vh-120px)]">
           <App />
         </div>
+        <Footer />
       </HashRouter>
       <link
         rel="stylesheet"

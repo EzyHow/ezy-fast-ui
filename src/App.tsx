@@ -7,6 +7,7 @@ import SnippetList from './pages/snippets/SnippetList'
 import SnippetShow from './pages/snippets/SnippetShow'
 import ErrorPage from './error-page'
 import NotFound from './pages/error/NotFound'
+import HomePage from './pages/homepage/HomePage'
 
 const allowedTypes = ['snippets', 'animations'];
 function App() {
@@ -14,7 +15,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<List />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/list" element={<List />} />
         <Route path="/list/:type" element={<SnippetList />} />
         <Route path="/:type/:slug" element={<SnippetShow />} loader={({ params }) => {

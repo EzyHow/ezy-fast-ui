@@ -10,22 +10,26 @@ export default function List() {
                 <Link to="/list/animations">
                     <div className="whitespace-pre-wrap text-white">
                         <div className="rounded-2xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1 shadow-xl">
-                            <div className="relative block rounded-xl bg-gray-900 p-4 text-center">
+                            <h2 className="relative block rounded-xl bg-gray-900 p-4 text-center text-3xl animate-pulse">
                                 Animations
-                            </div>
+                            </h2>
                         </div>
                     </div>
                 </Link>
                 <Link to="/list/snippets">
                     <div className="whitespace-pre-wrap text-white">
                         <div className="rounded-2xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1 shadow-xl">
-                            <div className="relative block rounded-xl bg-gray-900 p-4 text-center">
+                            <h2 className="relative block rounded-xl bg-gray-900 p-4 text-center text-3xl animate-pulse">
                                 Snippets
-                            </div>
+                            </h2>
                         </div>
                     </div>
                 </Link>
             </div>
+
+
+
+
         </div>
     )
 }

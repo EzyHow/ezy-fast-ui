@@ -62,7 +62,7 @@ export default function NavigationHeader() {
                             className={`absolute inset-x-0 z-20 flex-1 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between 
                                 ${isOpen
                                     ? 'translate-x-0 opacity-100'
-                                    : 'opacity-0 -translate-y-full'}`}
+                                    : 'opacity-0 translate-y-full'}`}
                         >
                             <div
                                 className="flex flex-col  capitalize text-gray-300 lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center"

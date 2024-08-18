@@ -1,23 +1,24 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function NavigationHeader() {
 
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header>
+        <>
             <nav className="shadow-lg bg-gray-800 fixed top-0 left-0 w-screen z-[1000]">
                 <div className="container px-6 py-4 mx-auto">
                     <div className="lg:flex lg:items-center">
-                        <div className="flex items-center justify-between">
+                        <div className="flex items-center justify-between z-30">
                             <div>
-                                <a
+                                <Link
                                     className="text-2xl font-bold transition-colors duration-300 transform text-white lg:text-3xl hover:text-gray-300"
-                                    href="/">Ezy Fast UI</a>
+                                    to="/">Ezy Fast UI</Link>
                             </div>
 
                             {/* <!-- Mobile menu button --> */}
-                            <div className="flex lg:hidden">
+                            <div className="flex visible lg:hidden">
                                 <button
                                     onClick={() => (setIsOpen(!isOpen))}
                                     type="button"
@@ -28,6 +29,7 @@ export default function NavigationHeader() {
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="none"
+                                            className="w-6 h-6"
                                             stroke="currentColor"
                                             strokeWidth="2"
                                             viewBox="0 0 24 24"
@@ -57,45 +59,26 @@ export default function NavigationHeader() {
                         </div>
 
                         <div
-                            className="absolute inset-x-0 z-20 flex-1 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between {isOpen
-					? 'translate-x-0 opacity-100'
-					: 'opacity-0 -translate-x-full'}"
+                            className={`absolute inset-x-0 z-20 flex-1 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between 
+                                ${isOpen
+                                    ? 'translate-x-0 opacity-100'
+                                    : 'opacity-0 -translate-y-full'}`}
                         >
                             <div
                                 className="flex flex-col  capitalize text-gray-300 lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center"
                             >
-                                <a
-                                    href="/list/animations"
+                                <Link
+                                    to="/list/animations"
                                     className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-200"
-                                >Animations</a>
-                                <a
-                                    href="/list/snippets"
+                                >Animations</Link>
+                                <Link
+                                    to="/list/snippets"
                                     className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-200"
-                                >Snippets</a>
-                                <a
-                                    href="/about"
+                                >Snippets</Link>
+                                <Link
+                                    to="/about"
                                     className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-200"
-                                >About</a>
-
-                                {/* <!-- <div className="relative mt-4 lg:mt-0 lg:mx-4">
-						<span className="absolute inset-y-0 left-0 flex items-center pl-3">
-							<svg className="w-4 h-4 text-gray-300" viewBox="0 0 24 24" fill="none">
-								<path
-									d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-							</svg>
-						</span>
-
-						<input
-							type="text"
-							className="w-full py-1 pl-10 pr-4 placeholder-gray-300 lg:w-56 lg:border-transparent bg-gray-800 text-gray-300 focus:outline-none focus:border-gray-300 border transition-all"
-							placeholder="Search"
-						/>
-					</div> --> */}
+                                >About</Link>
                             </div>
 
                             <div className="flex justify-center mt-6 lg:flex lg:mt-0 lg:-mx-2">
@@ -146,6 +129,6 @@ export default function NavigationHeader() {
                 </div>
             </nav>
             <div className="h-16" />
-        </header>
+        </>
     );
 }

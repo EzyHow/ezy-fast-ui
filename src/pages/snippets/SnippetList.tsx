@@ -26,7 +26,7 @@ const SnippetList: React.FC = () => {
                 setFilteredSnippets(snippets.filter((snippet) => selectedCategories.has(snippet.category)));
             }
         }
-    }, [selectedCategories]);
+    }, [selectedCategories, type]);
 
     const handleCategoryChange = (category: string) => {
         setSelectedCategories((prevCategories) => {
@@ -134,8 +134,8 @@ const SnippetList: React.FC = () => {
                     </div>
                 )}
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                    {filteredSnippets.map((snippet, index) => (<div className="relative">
-                        <CodeSnippetViewer key={index} snippet={snippet} isCollectionView={true} />
+                    {filteredSnippets.map((snippet) => (<div className="relative" key={snippet.slug} >
+                        <CodeSnippetViewer snippet={snippet} isCollectionView={true} />
                         <a
                             href={`/${type}/${snippet.slug}`}
                             className="block transition-colors duration-300 overflow-hidden group absolute bottom-3 right-4 text-orange-200 active:translate-y-0.5 hover:text-white"
@@ -147,9 +147,9 @@ const SnippetList: React.FC = () => {
                                 viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg"
                             ><path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
                                     d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
                                 /></svg> <span className="inline-block">View Code</span>
                         </a>

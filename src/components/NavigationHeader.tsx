@@ -10,7 +10,7 @@ export default function NavigationHeader() {
             <nav className="shadow-lg bg-gray-800 fixed top-0 left-0 w-screen z-[1000]">
                 <div className="container px-6 py-4 mx-auto">
                     <div className="lg:flex lg:items-center">
-                        <div className="flex items-center justify-between z-30">
+                        <div className="flex items-center justify-between">
                             <div>
                                 <Link
                                     className="text-2xl font-bold transition-colors duration-300 transform text-white lg:text-3xl hover:text-gray-300"
@@ -62,7 +62,7 @@ export default function NavigationHeader() {
                             className={`absolute inset-x-0 z-20 flex-1 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between 
                                 ${isOpen
                                     ? 'translate-x-0 opacity-100'
-                                    : 'opacity-0 translate-y-full'}`}
+                                    : 'opacity-0 translate-x-full'}`}
                         >
                             <div
                                 className="flex flex-col  capitalize text-gray-300 lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center"

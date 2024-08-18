@@ -1,50 +1,33 @@
-# React + TypeScript + Vite
+# ezy-fast-ui
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to [**ezy-fast-ui**](https://fastui.ezyhow.com)! This open-source project provides a collection of beautiful HTML elements and CSS animations that you can easily integrate into your personal or commercial projects. Whether you're a seasoned developer or just starting out, ezy-fast-ui is here to make your UI design process faster and more efficient.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [License](#license)
+- [Sponsor](#sponsor)
 
-## Expanding the ESLint configuration
+## Introduction
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+ezy-fast-ui offers a set of pre-designed HTML elements and CSS animations. Simply copy and paste the provided code snippets into your project to enhance your web pages with minimal effort. Developed by a developer, for developers, our goal is to streamline your UI development process and bring stunning visuals to your projects.
 
-- Configure the top-level `parserOptions` property like this:
+## Features
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Easy Integration**: Copy and paste HTML, CSS, and JavaScript snippets directly into your project.
+- **Customization**: Adjust styles and functionality to match your project's needs.
+- **Free to Use**: Incorporate the snippets into personal and commercial projects without any cost.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Installation
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+You don’t need to install anything to use ezy-fast-ui. Simply visit our website and browse the available snippets:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- [fastui.ezyhow.com](https://fastui.ezyhow.com)
+
+## License
+ezy-fast-ui is released under the MIT License. You are free to use, modify, and distribute the code in your projects, both personal and commercial, with no restrictions.
+
+## Sponsor
+[![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/ezyhow)

@@ -1,0 +1,8 @@
+# robots.txt for ezy-fast-ui
+
+# Allow all user agents to crawl the entire site
+User-agent: *
+Disallow:
+
+# Sitemap location
+Sitemap: https://fastui.ezyhow.com/sitemap.xml

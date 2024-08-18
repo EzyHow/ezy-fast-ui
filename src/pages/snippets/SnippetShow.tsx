@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { snippets } from '../../data/snippets';
 import { CodeSnippetData } from '../../types';
 import CodeViewer from '../../components/CodeViewer';
@@ -18,7 +18,6 @@ const SnippetShow = () => {
             tempArray = snippets;
         }
         if (tempArray && tempArray.length > 0) {
-            console.log('sdf => ', slug);
             if (slug) {
                 const foundSnippet = tempArray.find((sn) => sn.slug === slug);
                 setSelected(foundSnippet || null);
@@ -34,8 +33,8 @@ const SnippetShow = () => {
                     {selected ? (
                         <>
                             <div className="flex justify-start items-center">
-                                <a
-                                    href={`/list/${type}`}
+                                <Link
+                                    to={`/list/${type}`}
                                     className="flex justify-start items-center text-sm text-orange-200 active:translate-y-0.5 hover:text-white ml-2 animate-pulse"
                                 >
                                     <svg
@@ -53,11 +52,13 @@ const SnippetShow = () => {
                                         />
                                     </svg>
                                     Back
-                                </a>
+                                </Link>
                                 <h3 className="text-center mb-5 text-white text-3xl font-bold flex-1">{selected?.name}</h3>
                             </div>
-                            <div className="grid auto-grid gap-4">
-                                <CodeSnippetViewer snippet={selected} />
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                                <div className='grid grid-cols-1'>
+                                    <CodeSnippetViewer snippet={selected} />
+                                </div>
                                 <div className="grid grid-cols-1 row-auto gap-4">
                                     {selected?.html && (
                                         <CodeViewer code={selected?.html} language="html" heading="HTML" />
@@ -92,12 +93,12 @@ const SnippetShow = () => {
                             <p className="text-gray-200 text-xl mb-4">
                                 Sorry, We couldn't find what you are looking for!
                             </p>
-                            <a
-                                href="/component"
+                            <Link
+                                to="/list"
                                 className="inline-block rounded border border-current px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-gray-100 animate-pulse"
                             >
                                 View all snippets
-                            </a>
+                            </Link>
                         </div>
                     )}
                 </div>

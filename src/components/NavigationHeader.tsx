@@ -14,7 +14,10 @@ export default function NavigationHeader() {
                             <div>
                                 <Link
                                     className="text-2xl font-bold transition-colors duration-300 transform text-white lg:text-3xl hover:text-gray-300"
-                                    to="/">Ezy Fast UI</Link>
+                                    to="/">
+                                    <img src="./images/logo.png" className="h-10 inline-block mr-4" alt="Ezy Fast UI" />
+                                    Ezy Fast UI
+                                </Link>
                             </div>
 
                             {/* <!-- Mobile menu button --> */}

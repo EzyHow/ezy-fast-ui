@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { CodeSnippetCategories, AnimationCategories } from '../../types';
 import CodeSnippetViewer from '../../components/CodeSnippetViewer';
 import { snippets } from '../../data/snippets';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { animations } from '../../data/animations';
 
 
@@ -136,8 +136,8 @@ const SnippetList: React.FC = () => {
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     {filteredSnippets.map((snippet) => (<div className="relative" key={snippet.slug} >
                         <CodeSnippetViewer snippet={snippet} isCollectionView={true} />
-                        <a
-                            href={`/${type}/${snippet.slug}`}
+                        <Link
+                            to={`/${type}/${snippet.slug}`}
                             className="block transition-colors duration-300 overflow-hidden group absolute bottom-3 right-4 text-orange-200 active:translate-y-0.5 hover:text-white"
                         >
                             <svg
@@ -152,7 +152,7 @@ const SnippetList: React.FC = () => {
                                     strokeWidth="2"
                                     d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
                                 /></svg> <span className="inline-block">View Code</span>
-                        </a>
+                        </Link>
                     </div>
                     ))}
                 </div>

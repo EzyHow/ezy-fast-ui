@@ -267,432 +267,427 @@ Error generating stack: `+o.message+`
   </label>
 </div>
               `,hiddenStyle:""}],Yn=[{name:"Rotate 180",hint:"Hover over the box!",slug:"rotate-180-on-hover",category:"Hover",tags:["Rotate","Hover"],css:`
-                    .ezy-rotate-180 {
-                        transition: all 0.5s;
-                    }
-                    .ezy-rotate-180:hover {
-                        transform: rotate(180deg);
-                    }
-                    
-                    
-                    /* Below code is just to make a box*/
-                    .box {
-                      width: 100px;
-                        height: 100px;
-                      background-color: #EB455F;
-                      border-radius: 5px;
-                      box-shadow: 0px 0px 10px #CB1C8D;
-                      cursor: pointer;
-                    }
-  
-                    `,html:`
-                    <div class="box ezy-rotate-180"></div>
-                    `,hiddenStyle:""},{name:"TransLeft",hint:"Hover over the box!",slug:"trans-left-on-hover",category:"Hover",tags:["Translate","Hover","Left"],css:`
-                    .ezy-transLeft {
-                        transition: .5s, color .10s;
-                            -webkit-transition: .5s, color .10s;
-                            -moz-transition: .5s, color .10s;
-                    }
-                    .ezy-transLeft:hover {
-                        transform: translatex(-20px);
-                            -webkit-transform: translatex(-20px);
-                            -moz-transform: translatex(-20px);
-                    }
-                     
-                    /* Below code is just to make a box*/
-                    .box {
-                      width: 100px;
-                        height: 100px;
-                      background-color: #EB455F;
-                      border-radius: 5px;
-                      box-shadow: 0px 0px 10px #CB1C8D;
-                      cursor: pointer;
-                    }
-  
-                    `,html:`
-                    <div class="box ezy-transLeft"></div>
-                    `,hiddenStyle:""},{name:"Bounce",hint:"Hover over the box!",slug:"bounce-on-hover",category:"Hover",tags:["Bounce","Hover"],css:`
-                    @keyframes ezy-bounce {
-                        from,
-                        20%,
-                        53%,
-                        to {
-                          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-                          transform: translate3d(0, 0, 0);
-                        }
-                      
-                        40%,
-                        43% {
-                          animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-                          transform: translate3d(0, -30px, 0) scaleY(1.1);
-                        }
-                      
-                        70% {
-                          animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-                          transform: translate3d(0, -15px, 0) scaleY(1.05);
-                        }
-                      
-                        80% {
-                          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-                          transform: translate3d(0, 0, 0) scaleY(0.95);
-                        }
-                      
-                        90% {
-                          transform: translate3d(0, -4px, 0) scaleY(1.02);
-                        }
-                      }
-                      
-                      .ezy-bounce:hover {
-                        animation-duration: 1000ms;
-                        animation-name: ezy-bounce;
-                        transform-origin: center bottom;
-                      }
-                      
-                        
-                    
-                    /* Below code is just to make a box*/
-                    .box {
-                      width: 100px;
-                        height: 100px;
-                      background-color: #EB455F;
-                      border-radius: 5px;
-                      box-shadow: 0px 0px 10px #CB1C8D;
-                      cursor: pointer;
-                    }
+          .ezy-rotate-180 {
+              transition: all 0.5s;
+          }
+          .ezy-rotate-180:hover {
+              transform: rotate(180deg);
+          }
+          
+          
+          /* Below code is just to make a box*/
+          .box {
+            width: 100px;
+              height: 100px;
+            background-color: #EB455F;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px #CB1C8D;
+            cursor: pointer;
+          }
+          `,html:`
+          <div class="box ezy-rotate-180"></div>
+          `,hiddenStyle:""},{name:"TransLeft",hint:"Hover over the box!",slug:"trans-left-on-hover",category:"Hover",tags:["Translate","Hover","Left"],css:`
+          .ezy-transLeft {
+              transition: .5s, color .10s;
+                  -webkit-transition: .5s, color .10s;
+                  -moz-transition: .5s, color .10s;
+          }
+          .ezy-transLeft:hover {
+              transform: translatex(-20px);
+                  -webkit-transform: translatex(-20px);
+                  -moz-transform: translatex(-20px);
+          }
+            
+          /* Below code is just to make a box*/
+          .box {
+            width: 100px;
+              height: 100px;
+            background-color: #EB455F;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px #CB1C8D;
+            cursor: pointer;
+          }
+          `,html:`
+          <div class="box ezy-transLeft"></div>
+          `,hiddenStyle:""},{name:"Bounce",hint:"Hover over the box!",slug:"bounce-on-hover",category:"Hover",tags:["Bounce","Hover"],css:`
+        @keyframes ezy-bounce {
+            from,
+            20%,
+            53%,
+            to {
+              animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+              transform: translate3d(0, 0, 0);
+            }
+          
+            40%,
+            43% {
+              animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+              transform: translate3d(0, -30px, 0) scaleY(1.1);
+            }
+          
+            70% {
+              animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+              transform: translate3d(0, -15px, 0) scaleY(1.05);
+            }
+          
+            80% {
+              transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+              transform: translate3d(0, 0, 0) scaleY(0.95);
+            }
+          
+            90% {
+              transform: translate3d(0, -4px, 0) scaleY(1.02);
+            }
+          }
+          
+          .ezy-bounce:hover {
+            animation-duration: 1000ms;
+            animation-name: ezy-bounce;
+            transform-origin: center bottom;
+          }
+          
+            
+        
+        /* Below code is just to make a box*/
+        .box {
+          width: 100px;
+            height: 100px;
+          background-color: #EB455F;
+          border-radius: 5px;
+          box-shadow: 0px 0px 10px #CB1C8D;
+          cursor: pointer;
+        }
   `,html:`
-                    <div class="box ezy-bounce"></div>
-                    `,hiddenStyle:""},{name:"Bounce In",hint:"It works on entry!",slug:"entry-bounce-in",category:"Entry",showReplayButton:!0,tags:["Bounce","Hover"],css:`
-                    @keyframes ezy-bounceIn {
-                        from,
-                        20%,
-                        40%,
-                        60%,
-                        80%,
-                        to {
-                          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-                        }
-                      
-                        0% {
-                          opacity: 0;
-                          transform: scale3d(0.3, 0.3, 0.3);
-                        }
-                      
-                        20% {
-                          transform: scale3d(1.1, 1.1, 1.1);
-                        }
-                      
-                        40% {
-                          transform: scale3d(0.9, 0.9, 0.9);
-                        }
-                      
-                        60% {
-                          opacity: 1;
-                          transform: scale3d(1.03, 1.03, 1.03);
-                        }
-                      
-                        80% {
-                          transform: scale3d(0.97, 0.97, 0.97);
-                        }
-                      
-                        to {
-                          opacity: 1;
-                          transform: scale3d(1, 1, 1);
-                        }
-                      }
-                      
-                      .ezy-bounceIn {
-                        animation-duration: 1000ms;
-                        animation-name: ezy-bounceIn;
-                      }
-                      
-                        
-                      
-                      /* Below code is just to make a box*/
-                      .box {
-                        width: 100px;
-                        height: 100px;
-                        background-color: #EB455F;
-                        border-radius: 5px;
-                        box-shadow: 0px 0px 10px #CB1C8D;
-                        cursor: pointer;
-                      }
-    
-                      `,html:`
-                    <div class="box ezy-bounceIn"></div>
-                    `,hiddenStyle:""},{name:"Bounce In Down",hint:"It works on entry!",slug:"entry-bounce-in-down",tags:["Bounce","Hover"],category:"Entry",showReplayButton:!0,css:`
-                    @keyframes ezy-bounceInDown {
-                        from,
-                        60%,
-                        75%,
-                        90%,
-                        to {
-                          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-                        }
-                      
-                        0% {
-                          opacity: 0;
-                          transform: translate3d(0, -3000px, 0) scaleY(3);
-                        }
-                      
-                        60% {
-                          opacity: 1;
-                          transform: translate3d(0, 25px, 0) scaleY(0.9);
-                        }
-                      
-                        75% {
-                          transform: translate3d(0, -10px, 0) scaleY(0.95);
-                        }
-                      
-                        90% {
-                          transform: translate3d(0, 5px, 0) scaleY(0.985);
-                        }
-                      
-                        to {
-                          transform: translate3d(0, 0, 0);
-                        }
-                      }
-                      
-                      .ezy-bounceInDown {
-                        animation-duration: 1000ms;
-                        animation-name: ezy-bounceInDown;
-                      }
-                       
-                    
-                    /* Below code is just to make a box*/
-                    .box {
-                      width: 100px;
-                        height: 100px;
-                      background-color: #EB455F;
-                      border-radius: 5px;
-                      box-shadow: 0px 0px 10px #CB1C8D;
-                      cursor: pointer;
-                    }
+          <div class="box ezy-bounce"></div>
+          `,hiddenStyle:""},{name:"Bounce In",hint:"It works on entry!",slug:"entry-bounce-in",category:"Entry",showReplayButton:!0,tags:["Bounce","Hover"],css:`
+        @keyframes ezy-bounceIn {
+            from,
+            20%,
+            40%,
+            60%,
+            80%,
+            to {
+              animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+          
+            0% {
+              opacity: 0;
+              transform: scale3d(0.3, 0.3, 0.3);
+            }
+          
+            20% {
+              transform: scale3d(1.1, 1.1, 1.1);
+            }
+          
+            40% {
+              transform: scale3d(0.9, 0.9, 0.9);
+            }
+          
+            60% {
+              opacity: 1;
+              transform: scale3d(1.03, 1.03, 1.03);
+            }
+          
+            80% {
+              transform: scale3d(0.97, 0.97, 0.97);
+            }
+          
+            to {
+              opacity: 1;
+              transform: scale3d(1, 1, 1);
+            }
+          }
+          
+          .ezy-bounceIn {
+            animation-duration: 1000ms;
+            animation-name: ezy-bounceIn;
+          }
+          
+            
+          
+          /* Below code is just to make a box*/
+          .box {
+            width: 100px;
+            height: 100px;
+            background-color: #EB455F;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px #CB1C8D;
+            cursor: pointer;
+          }
+          `,html:`
+          <div class="box ezy-bounceIn"></div>
+          `,hiddenStyle:""},{name:"Bounce In Down",hint:"It works on entry!",slug:"entry-bounce-in-down",tags:["Bounce","Hover"],category:"Entry",showReplayButton:!0,css:`
+          @keyframes ezy-bounceInDown {
+              from,
+              60%,
+              75%,
+              90%,
+              to {
+                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+              }
+            
+              0% {
+                opacity: 0;
+                transform: translate3d(0, -3000px, 0) scaleY(3);
+              }
+            
+              60% {
+                opacity: 1;
+                transform: translate3d(0, 25px, 0) scaleY(0.9);
+              }
+            
+              75% {
+                transform: translate3d(0, -10px, 0) scaleY(0.95);
+              }
+            
+              90% {
+                transform: translate3d(0, 5px, 0) scaleY(0.985);
+              }
+            
+              to {
+                transform: translate3d(0, 0, 0);
+              }
+            }
+            
+            .ezy-bounceInDown {
+              animation-duration: 1000ms;
+              animation-name: ezy-bounceInDown;
+            }
+              
+          
+          /* Below code is just to make a box*/
+          .box {
+            width: 100px;
+              height: 100px;
+            background-color: #EB455F;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px #CB1C8D;
+            cursor: pointer;
+          }
   `,html:`
-                    <div class="box ezy-bounceInDown"></div>
-                    `,hiddenStyle:""},{name:"Bounce In Left",hint:"It works on entry!",slug:"entry-bounce-in-left",category:"Entry",showReplayButton:!0,tags:["Bounce","Entry"],css:`
-                    @keyframes ezy-bounceInLeft {
-                        from,
-                        60%,
-                        75%,
-                        90%,
-                        to {
-                          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-                        }
-                      
-                        0% {
-                          opacity: 0;
-                          transform: translate3d(-3000px, 0, 0) scaleX(3);
-                        }
-                      
-                        60% {
-                          opacity: 1;
-                          transform: translate3d(25px, 0, 0) scaleX(1);
-                        }
-                      
-                        75% {
-                          transform: translate3d(-10px, 0, 0) scaleX(0.98);
-                        }
-                      
-                        90% {
-                          transform: translate3d(5px, 0, 0) scaleX(0.995);
-                        }
-                      
-                        to {
-                          transform: translate3d(0, 0, 0);
-                        }
-                      }
-                      
-                      .ezy-bounceInLeft {
-                        animation-duration: 1000ms;
-                        animation-name: ezy-bounceInLeft;
-                      }
-                      
-                      
-                    
-                    /* Below code is just to make a box*/
-                    .box {
-                      width: 100px;
-                        height: 100px;
-                      background-color: #EB455F;
-                      border-radius: 5px;
-                      box-shadow: 0px 0px 10px #CB1C8D;
-                      cursor: pointer;
-                    }
-  
-                      `,html:`
-                    <div class="box ezy-bounceInLeft"></div>
-                    `,hiddenStyle:""},{name:"Bounce In Right",hint:"It works on entry!",slug:"entry-bounce-in-right",category:"Entry",showReplayButton:!0,tags:["Bounce","Entry"],css:`
-                    @keyframes ezy-bounceInRight {
-                        from,
-                        60%,
-                        75%,
-                        90%,
-                        to {
-                          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-                        }
-                      
-                        from {
-                          opacity: 0;
-                          transform: translate3d(3000px, 0, 0) scaleX(3);
-                        }
-                      
-                        60% {
-                          opacity: 1;
-                          transform: translate3d(-25px, 0, 0) scaleX(1);
-                        }
-                      
-                        75% {
-                          transform: translate3d(10px, 0, 0) scaleX(0.98);
-                        }
-                      
-                        90% {
-                          transform: translate3d(-5px, 0, 0) scaleX(0.995);
-                        }
-                      
-                        to {
-                          transform: translate3d(0, 0, 0);
-                        }
-                      }
-                      
-                      .ezy-bounceInRight {
-                        animation-duration: 1000ms;
-                        animation-name: ezy-bounceInRight;
-                      }
-                      
-                      
-                    
-                    /* Below code is just to make a box*/
-                    .box {
-                      width: 100px;
-                        height: 100px;
-                      background-color: #EB455F;
-                      border-radius: 5px;
-                      box-shadow: 0px 0px 10px #CB1C8D;
-                      cursor: pointer;
-                    }
-  
-                      `,html:`
-                    <div class="box ezy-bounceInRight"></div>
-                    `,hiddenStyle:""},{name:"Bounce In Up",hint:"It works on entry!",slug:"entry-bounce-in-up",showReplayButton:!0,tags:["Bounce","Entry"],category:"Entry",css:`
-                    @keyframes ezy-bounceInUp {
-                        from,
-                        60%,
-                        75%,
-                        90%,
-                        to {
-                          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-                        }
-                      
-                        from {
-                          opacity: 0;
-                          transform: translate3d(0, 3000px, 0) scaleY(5);
-                        }
-                      
-                        60% {
-                          opacity: 1;
-                          transform: translate3d(0, -20px, 0) scaleY(0.9);
-                        }
-                      
-                        75% {
-                          transform: translate3d(0, 10px, 0) scaleY(0.95);
-                        }
-                      
-                        90% {
-                          transform: translate3d(0, -5px, 0) scaleY(0.985);
-                        }
-                      
-                        to {
-                          transform: translate3d(0, 0, 0);
-                        }
-                      }
-                      
-                      .ezy-bounceInUp {
-                        animation-duration: 1000ms;
-                        animation-name: ezy-bounceInUp;
-                      }
-                      
-                      
-                    
-                    /* Below code is just to make a box*/
-                    .box {
-                      width: 100px;
-                        height: 100px;
-                      background-color: #EB455F;
-                      border-radius: 5px;
-                      box-shadow: 0px 0px 10px #CB1C8D;
-                      cursor: pointer;
-                    }
-  
-                      `,html:`
-                    <div class="box ezy-bounceInUp"></div>
-                    `,hiddenStyle:""},{name:"Scale Out",hint:"It works on entry!",slug:"entry-scale-out",showReplayButton:!0,tags:["Scale","Entry"],category:"Entry",css:`
-                    @keyframes ezy-scaleOut {
-                        from {
-                          transform: scale3d(1, 1, 1);
-                        }
-                      
-                        50% {
-                          transform: scale3d(1.25, 1.25, 1.25);
-                        }
-                      
-                        to {
-                          transform: scale3d(1, 1, 1);
-                        }
-                      }
-                      
-                      .ezy-scaleOut {
-                        animation-name: ezy-scaleOut;
-                        animation-duration: 1000ms;
-                        animation-timing-function: ease-in-out;
-                      }
-                      
-                      
-                    
-                    /* Below code is just to make a box*/
-                    .box {
-                      width: 100px;
-                        height: 100px;
-                      background-color: #EB455F;
-                      border-radius: 5px;
-                      box-shadow: 0px 0px 10px #CB1C8D;
-                      cursor: pointer;
-                    }
-  
-                    `,html:`
-                    <div class="box ezy-scaleOut"></div>
-                    `,hiddenStyle:""},{name:"Scale In",hint:"It works on entry!",slug:"entry-scale-in",category:"Entry",showReplayButton:!0,tags:["Scale","Entry"],css:`
-                    @keyframes ezy-scaleIn {
-                        from {
-                          transform: scale3d(1, 1, 1);
-                        }
-                      
-                        50% {
-                          transform: scale3d(0.80, 0.80, 0.80);
-                        }
-                      
-                        to {
-                          transform: scale3d(1, 1, 1);
-                        }
-                      }
-                      
-                      .ezy-scaleIn {
-                        animation-name: ezy-scaleIn;
-                        animation-duration: 1000ms;
-                        animation-timing-function: ease-in-out;
-                      }
-                    
-                      /* Below code is just to make a box*/
-                      .box {
-                        width: 100px;
-                        height: 100px;
-                        background-color: #EB455F;
-                        border-radius: 5px;
-                        box-shadow: 0px 0px 10px #CB1C8D;
-                        cursor: pointer;
-                      }
+          <div class="box ezy-bounceInDown"></div>
+          `,hiddenStyle:""},{name:"Bounce In Left",hint:"It works on entry!",slug:"entry-bounce-in-left",category:"Entry",showReplayButton:!0,tags:["Bounce","Entry"],css:`
+          @keyframes ezy-bounceInLeft {
+              from,
+              60%,
+              75%,
+              90%,
+              to {
+                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+              }
+            
+              0% {
+                opacity: 0;
+                transform: translate3d(-3000px, 0, 0) scaleX(3);
+              }
+            
+              60% {
+                opacity: 1;
+                transform: translate3d(25px, 0, 0) scaleX(1);
+              }
+            
+              75% {
+                transform: translate3d(-10px, 0, 0) scaleX(0.98);
+              }
+            
+              90% {
+                transform: translate3d(5px, 0, 0) scaleX(0.995);
+              }
+            
+              to {
+                transform: translate3d(0, 0, 0);
+              }
+            }
+            
+            .ezy-bounceInLeft {
+              animation-duration: 1000ms;
+              animation-name: ezy-bounceInLeft;
+            }
+            
+            
+          
+          /* Below code is just to make a box*/
+          .box {
+            width: 100px;
+              height: 100px;
+            background-color: #EB455F;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px #CB1C8D;
+            cursor: pointer;
+          }
+          `,html:`
+          <div class="box ezy-bounceInLeft"></div>
+          `,hiddenStyle:""},{name:"Bounce In Right",hint:"It works on entry!",slug:"entry-bounce-in-right",category:"Entry",showReplayButton:!0,tags:["Bounce","Entry"],css:`
+        @keyframes ezy-bounceInRight {
+            from,
+            60%,
+            75%,
+            90%,
+            to {
+              animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+          
+            from {
+              opacity: 0;
+              transform: translate3d(3000px, 0, 0) scaleX(3);
+            }
+          
+            60% {
+              opacity: 1;
+              transform: translate3d(-25px, 0, 0) scaleX(1);
+            }
+          
+            75% {
+              transform: translate3d(10px, 0, 0) scaleX(0.98);
+            }
+          
+            90% {
+              transform: translate3d(-5px, 0, 0) scaleX(0.995);
+            }
+          
+            to {
+              transform: translate3d(0, 0, 0);
+            }
+          }
+          
+          .ezy-bounceInRight {
+            animation-duration: 1000ms;
+            animation-name: ezy-bounceInRight;
+          }
+          
+          
+        
+        /* Below code is just to make a box*/
+        .box {
+          width: 100px;
+            height: 100px;
+          background-color: #EB455F;
+          border-radius: 5px;
+          box-shadow: 0px 0px 10px #CB1C8D;
+          cursor: pointer;
+        }
+
+          `,html:`
+          <div class="box ezy-bounceInRight"></div>
+          `,hiddenStyle:""},{name:"Bounce In Up",hint:"It works on entry!",slug:"entry-bounce-in-up",showReplayButton:!0,tags:["Bounce","Entry"],category:"Entry",css:`
+        @keyframes ezy-bounceInUp {
+            from,
+            60%,
+            75%,
+            90%,
+            to {
+              animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+          
+            from {
+              opacity: 0;
+              transform: translate3d(0, 3000px, 0) scaleY(5);
+            }
+          
+            60% {
+              opacity: 1;
+              transform: translate3d(0, -20px, 0) scaleY(0.9);
+            }
+          
+            75% {
+              transform: translate3d(0, 10px, 0) scaleY(0.95);
+            }
+          
+            90% {
+              transform: translate3d(0, -5px, 0) scaleY(0.985);
+            }
+          
+            to {
+              transform: translate3d(0, 0, 0);
+            }
+          }
+          
+          .ezy-bounceInUp {
+            animation-duration: 1000ms;
+            animation-name: ezy-bounceInUp;
+          }
+          
+          
+        
+        /* Below code is just to make a box*/
+        .box {
+          width: 100px;
+            height: 100px;
+          background-color: #EB455F;
+          border-radius: 5px;
+          box-shadow: 0px 0px 10px #CB1C8D;
+          cursor: pointer;
+        }
+          `,html:`
+          <div class="box ezy-bounceInUp"></div>
+          `,hiddenStyle:""},{name:"Scale Out",hint:"It works on entry!",slug:"entry-scale-out",showReplayButton:!0,tags:["Scale","Entry"],category:"Entry",css:`
+          @keyframes ezy-scaleOut {
+              from {
+                transform: scale3d(1, 1, 1);
+              }
+            
+              50% {
+                transform: scale3d(1.25, 1.25, 1.25);
+              }
+            
+              to {
+                transform: scale3d(1, 1, 1);
+              }
+            }
+            
+            .ezy-scaleOut {
+              animation-name: ezy-scaleOut;
+              animation-duration: 1000ms;
+              animation-timing-function: ease-in-out;
+            }
+            
+            
+          
+          /* Below code is just to make a box*/
+          .box {
+            width: 100px;
+              height: 100px;
+            background-color: #EB455F;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px #CB1C8D;
+            cursor: pointer;
+          }
+
+          `,html:`
+          <div class="box ezy-scaleOut"></div>
+          `,hiddenStyle:""},{name:"Scale In",hint:"It works on entry!",slug:"entry-scale-in",category:"Entry",showReplayButton:!0,tags:["Scale","Entry"],css:`
+        @keyframes ezy-scaleIn {
+            from {
+              transform: scale3d(1, 1, 1);
+            }
+          
+            50% {
+              transform: scale3d(0.80, 0.80, 0.80);
+            }
+          
+            to {
+              transform: scale3d(1, 1, 1);
+            }
+          }
+          
+          .ezy-scaleIn {
+            animation-name: ezy-scaleIn;
+            animation-duration: 1000ms;
+            animation-timing-function: ease-in-out;
+          }
+        
+          /* Below code is just to make a box*/
+          .box {
+            width: 100px;
+            height: 100px;
+            background-color: #EB455F;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px #CB1C8D;
+            cursor: pointer;
+          }
     `,html:`
-                    <div class="box ezy-scaleIn"></div>
-                    `,hiddenStyle:""}],A0=()=>{const{type:e}=qc(),[t,n]=z.useState(new Set),[r,l]=z.useState(e=="animations"?Yn:Qn),o=e=="animations"?M0:O0;z.useEffect(()=>{t.size===0?l(e=="animations"?Yn:Qn):e=="animations"?l(Yn.filter(u=>t.has(u.category))):l(Qn.filter(u=>t.has(u.category)))},[t,e]);const i=u=>{n(d=>{const g=new Set(d);return g.has(u)?g.delete(u):g.add(u),g})},a=()=>{n(new Set)};return p.jsx("section",{children:p.jsxs("div",{className:"max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8",children:[p.jsxs("header",{children:[p.jsxs("h2",{className:"text-xl font-bold text-white sm:text-3xl",children:["Ezy Fast UI ",e=="animations"?"Animations":"Snippets"," Collection"]}),p.jsx("p",{className:"max-w-md mt-4 text-gray-200",children:"Available for personal and commercial use."})]}),p.jsx("div",{className:"mt-8 flex items-center justify-end",children:p.jsx("div",{className:"flex gap-4",children:p.jsx("div",{className:"relative",children:p.jsxs("details",{className:"group",children:[p.jsxs("summary",{className:"flex items-center gap-2 pb-1 text-gray-100 transition border-b border-gray-400 cursor-pointer hover:border-gray-600",children:[p.jsx("span",{className:"text-sm font-medium",children:"Category"}),p.jsx("span",{className:"transition group-open:-rotate-180",children:p.jsx("svg",{xmlns:"http://www.w3.org/2000/svg",fill:"none",viewBox:"0 0 24 24",strokeWidth:"1.5",stroke:"currentColor",className:"w-4 h-4",children:p.jsx("path",{strokeLinecap:"round",strokeLinejoin:"round",d:"M19.5 8.25l-7.5 7.5-7.5-7.5"})})})]}),p.jsx("div",{className:"z-50 group-open:absolute group-open:top-auto group-open:left-0 group-open:mt-2",children:p.jsxs("div",{className:"bg-slate-900 border border-gray-900 rounded w-80 -translate-x-60 shadow-md",children:[p.jsxs("header",{className:"flex items-center justify-between p-4",children:[p.jsxs("span",{className:"text-sm text-gray-200",children:[t.size," Selected"]}),p.jsx("button",{type:"button",onClick:a,className:"text-sm text-gray-100 underline underline-offset-4",children:"Reset"})]}),p.jsx("ul",{className:"p-4 space-y-1 border-t border-gray-200",children:o.map(u=>p.jsx("li",{children:p.jsxs("label",{htmlFor:u,className:"inline-flex items-center gap-2 w-full cursor-pointer",children:[p.jsx("input",{type:"checkbox",id:u,className:"w-5 h-5 border-gray-300 rounded",checked:t.has(u),onChange:()=>i(u)}),p.jsx("span",{className:"text-sm font-medium text-gray-200",children:u})]})},u))})]})})]})})})}),p.jsxs("div",{className:"text-gray-100",children:[p.jsx("strong",{children:"Showing results for: "}),p.jsx("span",{className:"text-gray-200",children:t.size>0?Array.from(t).map((u,d)=>p.jsxs(Uu.Fragment,{children:[d!==0&&", ",u]},u)):"All categories"})]}),p.jsx("hr",{className:"mb-5 mt-1 opacity-50"}),r.length===0&&p.jsx("div",{className:"text-center",children:p.jsx("p",{className:"text-gray-200 text-sm italic",children:"No record found!"})}),p.jsx("div",{className:"grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3",children:r.map(u=>p.jsxs("div",{className:"relative",children:[p.jsx(rd,{snippet:u,isCollectionView:!0}),p.jsxs(Ze,{to:`/${e}/${u.slug}`,className:"block transition-colors duration-300 overflow-hidden group absolute bottom-3 right-4 text-orange-200 active:translate-y-0.5 hover:text-white",children:[p.jsx("svg",{className:"w-6 h-6 inline-block",fill:"none",stroke:"currentColor",viewBox:"0 0 24 24",xmlns:"http://www.w3.org/2000/svg",children:p.jsx("path",{strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:"2",d:"M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"})})," ",p.jsx("span",{className:"inline-block",children:"View Code"})]})]},u.slug))})]})})};var ld={exports:{}};(function(e){var t=typeof window<"u"?window:typeof WorkerGlobalScope<"u"&&self instanceof WorkerGlobalScope?self:{};/**
+          <div class="box ezy-scaleIn"></div>
+          `,hiddenStyle:""}],A0=()=>{const{type:e}=qc(),[t,n]=z.useState(new Set),[r,l]=z.useState(e=="animations"?Yn:Qn),o=e=="animations"?M0:O0;z.useEffect(()=>{t.size===0?l(e=="animations"?Yn:Qn):e=="animations"?l(Yn.filter(u=>t.has(u.category))):l(Qn.filter(u=>t.has(u.category)))},[t,e]);const i=u=>{n(d=>{const g=new Set(d);return g.has(u)?g.delete(u):g.add(u),g})},a=()=>{n(new Set)};return p.jsx("section",{children:p.jsxs("div",{className:"max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8",children:[p.jsxs("header",{children:[p.jsxs("h2",{className:"text-xl font-bold text-white sm:text-3xl",children:["Ezy Fast UI ",e=="animations"?"Animations":"Snippets"," Collection"]}),p.jsx("p",{className:"max-w-md mt-4 text-gray-200",children:"Available for personal and commercial use."})]}),p.jsx("div",{className:"mt-8 flex items-center justify-end",children:p.jsx("div",{className:"flex gap-4",children:p.jsx("div",{className:"relative",children:p.jsxs("details",{className:"group",children:[p.jsxs("summary",{className:"flex items-center gap-2 pb-1 text-gray-100 transition border-b border-gray-400 cursor-pointer hover:border-gray-600",children:[p.jsx("span",{className:"text-sm font-medium",children:"Category"}),p.jsx("span",{className:"transition group-open:-rotate-180",children:p.jsx("svg",{xmlns:"http://www.w3.org/2000/svg",fill:"none",viewBox:"0 0 24 24",strokeWidth:"1.5",stroke:"currentColor",className:"w-4 h-4",children:p.jsx("path",{strokeLinecap:"round",strokeLinejoin:"round",d:"M19.5 8.25l-7.5 7.5-7.5-7.5"})})})]}),p.jsx("div",{className:"z-50 group-open:absolute group-open:top-auto group-open:left-0 group-open:mt-2",children:p.jsxs("div",{className:"bg-slate-900 border border-gray-900 rounded w-80 -translate-x-60 shadow-md",children:[p.jsxs("header",{className:"flex items-center justify-between p-4",children:[p.jsxs("span",{className:"text-sm text-gray-200",children:[t.size," Selected"]}),p.jsx("button",{type:"button",onClick:a,className:"text-sm text-gray-100 underline underline-offset-4",children:"Reset"})]}),p.jsx("ul",{className:"p-4 space-y-1 border-t border-gray-200",children:o.map(u=>p.jsx("li",{children:p.jsxs("label",{htmlFor:u,className:"inline-flex items-center gap-2 w-full cursor-pointer",children:[p.jsx("input",{type:"checkbox",id:u,className:"w-5 h-5 border-gray-300 rounded",checked:t.has(u),onChange:()=>i(u)}),p.jsx("span",{className:"text-sm font-medium text-gray-200",children:u})]})},u))})]})})]})})})}),p.jsxs("div",{className:"text-gray-100",children:[p.jsx("strong",{children:"Showing results for: "}),p.jsx("span",{className:"text-gray-200",children:t.size>0?Array.from(t).map((u,d)=>p.jsxs(Uu.Fragment,{children:[d!==0&&", ",u]},u)):"All categories"})]}),p.jsx("hr",{className:"mb-5 mt-1 opacity-50"}),r.length===0&&p.jsx("div",{className:"text-center",children:p.jsx("p",{className:"text-gray-200 text-sm italic",children:"No record found!"})}),p.jsx("div",{className:"grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3",children:r.map(u=>p.jsxs("div",{className:"relative",children:[p.jsx(rd,{snippet:u,isCollectionView:!0}),p.jsxs(Ze,{to:`/${e}/${u.slug}`,className:"block transition-colors duration-300 overflow-hidden group absolute bottom-3 right-4 text-orange-200 active:translate-y-0.5 hover:text-white",children:[p.jsx("svg",{className:"w-6 h-6 inline-block",fill:"none",stroke:"currentColor",viewBox:"0 0 24 24",xmlns:"http://www.w3.org/2000/svg",children:p.jsx("path",{strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:"2",d:"M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"})})," ",p.jsx("span",{className:"inline-block",children:"View Code"})]})]},u.slug))})]})})};var ld={exports:{}};(function(e){var t=typeof window<"u"?window:typeof WorkerGlobalScope<"u"&&self instanceof WorkerGlobalScope?self:{};/**
  * Prism: Lightweight, robust, elegant syntax highlighting
  *
  * @license MIT <https://opensource.org/licenses/MIT>

@@ -70,8 +70,8 @@ export default function HomePage() {
                         <h2 className="text-3xl font-bold mb-8 text-center">Sample</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {
-                                randomElementIndices.map((index) => (<div className="relative">
-                                    <CodeSnippetViewer key={snippets[index].slug} snippet={snippets[index]} isCollectionView />
+                                randomElementIndices.map((index) => (<div className="relative" key={snippets[index].slug}>
+                                    <CodeSnippetViewer snippet={snippets[index]} isCollectionView />
                                     <Link
                                         to={`/snippet/${snippets[index].slug}`}
                                         className="block transition-colors duration-300 overflow-hidden group absolute bottom-3 right-4 text-orange-200 active:translate-y-0.5 hover:text-white"

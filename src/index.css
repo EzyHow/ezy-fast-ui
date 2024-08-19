@@ -34,7 +34,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background: #000000;
+  background: #e0e0e0;
 }
 
 ::-webkit-scrollbar-track {
@@ -48,7 +48,7 @@ body {
 }
 
 ::-webkit-scrollbar-track:active {
-  background: #333333;
+  background: #3b3b3b;
 }
 
 ::-webkit-scrollbar-corner {

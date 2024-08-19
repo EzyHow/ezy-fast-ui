@@ -111,7 +111,7 @@ export default function NavigationHeader() {
                                 </a>
 
                                 <a
-                                    href="https://github.com/EzyHow/"
+                                    href="https://github.com/EzyHow/ezy-fast-ui"
                                     className="mx-2 transition-colors duration-300 transform text-gray-300 hover:text-gray-300"
                                     aria-label="Github"
                                 >

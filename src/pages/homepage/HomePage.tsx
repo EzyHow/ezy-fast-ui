@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { snippets } from "../../data/snippets";
 import CodeSnippetViewer from "../../components/CodeSnippetViewer";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 
 export default function HomePage() {
@@ -33,6 +34,11 @@ export default function HomePage() {
 
     return (
         <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+
+            <Helmet>
+                <title>Free Code Snippets and Animations | Ezy Fast UI</title>
+                <link rel="canonical" href="https://fastui.ezyhow.com/" />
+            </Helmet>
 
             <div className="mb-4 text-center">
                 <h1 className="text-3xl font-bold mb-2">Ezy Fast UI</h1>

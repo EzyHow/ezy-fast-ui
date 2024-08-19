@@ -5,6 +5,7 @@ import { CodeSnippetData } from '../../types';
 import CodeViewer from '../../components/CodeViewer';
 import CodeSnippetViewer from '../../components/CodeSnippetViewer';
 import { animations } from '../../data/animations';
+import { Helmet } from 'react-helmet-async';
 
 const SnippetShow = () => {
     const { type, slug } = useParams();
@@ -27,7 +28,11 @@ const SnippetShow = () => {
 
 
     return (
-        <div className="mt-5">
+        <div className="mt-16">
+            <Helmet>
+                <title>Output of {selected?.name} | Ezy Fast UI</title>
+                <link rel="canonical" href={`https://fastui.ezyhow.com/#/${type}/${slug}`} />
+            </Helmet>
             <div className="grid grid-cols-1">
                 <div className="col-span-1 w-full pl-5 pr-5 pb-10">
                     {selected ? (

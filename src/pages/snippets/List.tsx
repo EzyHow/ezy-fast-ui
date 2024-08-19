@@ -1,8 +1,13 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function List() {
     return (
         <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+            <Helmet>
+                <title>List of Free Code Snippets and Animations | Ezy Fast UI</title>
+                <link rel="canonical" href="https://fastui.ezyhow.com/#/list" />
+            </Helmet>
             <div className="mb-8">
                 <h2 className="text-2xl font-bold text-white text-center">Select any of following to view snippets.</h2>
             </div>

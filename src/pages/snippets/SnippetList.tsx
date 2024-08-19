@@ -5,6 +5,7 @@ import CodeSnippetViewer from '../../components/CodeSnippetViewer';
 import { snippets } from '../../data/snippets';
 import { Link, useParams } from 'react-router-dom';
 import { animations } from '../../data/animations';
+import { Helmet } from 'react-helmet-async';
 
 
 const SnippetList: React.FC = () => {
@@ -46,6 +47,10 @@ const SnippetList: React.FC = () => {
 
     return (
         <section>
+            <Helmet>
+                <title>List of Free {type == 'animations' ? 'Animations' : 'Snippets'} | Ezy Fast UI</title>
+                <link rel="canonical" href={`https://fastui.ezyhow.com/#/list/${type}`} />
+            </Helmet>
             <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
                 <header>
                     <h2 className="text-xl font-bold text-white sm:text-3xl">Ezy Fast UI {type == 'animations' ? 'Animations' : 'Snippets'} Collection</h2>

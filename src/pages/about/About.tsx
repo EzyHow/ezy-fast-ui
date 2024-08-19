@@ -1,6 +1,12 @@
+import { Helmet } from "react-helmet-async";
+
 export default function About() {
     return (
         <section className="">
+            <Helmet>
+                <title>About Ezy Fast UI</title>
+                <link rel="canonical" href={`https://fastui.ezyhow.com/#/about`} />
+            </Helmet>
             <div className="p-8 md:p-12 lg:px-16 lg:py-24">
                 <div className="mx-auto max-w-lg text-center">
                     <h2 className="text-2xl font-bold text-white md:text-3xl">

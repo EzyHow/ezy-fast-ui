@@ -2,15 +2,15 @@ import { CodeSnippetData } from "../types";
 
 
 export const snippets: CodeSnippetData[] = [
-    {
-        name: "Spring Button",
-        hint: 'Click on button!',
-        slug: 'spring-button',
-        category: 'Button',
-        tags: [
-            'Round'
-        ],
-        css: `
+  {
+    name: "Spring Button",
+    hint: 'Click on button!',
+    slug: 'spring-button',
+    category: 'Button',
+    tags: [
+      'Round'
+    ],
+    css: `
       .ezy-spring-button {
         /* Variables */
        --button_radius: 0.75em;
@@ -46,26 +46,26 @@ export const snippets: CodeSnippetData[] = [
       }
 
               `
-        ,
-        html: `
+    ,
+    html: `
       <button class="ezy-spring-button">
       <span class="button_top"> Button
       </span>
     </button>
               `
-        ,
-        hiddenStyle: ''
-    },
-    {
-        name: "Outline Button",
-        hint: 'Click on button!',
-        slug: 'outline-button-1',
-        category: 'Button',
-        tags: [
-            'Outline',
-            'Glow'
-        ],
-        css: `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Outline Button",
+    hint: 'Click on button!',
+    slug: 'outline-button-1',
+    category: 'Button',
+    tags: [
+      'Outline',
+      'Glow'
+    ],
+    css: `
       .ezy-outline-button-1 {
         background-color: transparent;
         border: 2px solid #ec4899;
@@ -92,26 +92,26 @@ export const snippets: CodeSnippetData[] = [
       
 
               `
-        ,
-        html: `
+    ,
+    html: `
       <button class="ezy-outline-button-1">
        Button
     </button>
               `
-        ,
-        hiddenStyle: ''
-    },
-    {
-        name: "Outline Round Button",
-        hint: 'Click on button!',
-        slug: 'outline-round-button-1',
-        category: 'Button',
-        tags: [
-            'Outline',
-            'Glow',
-            'Round'
-        ],
-        css: `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Outline Round Button",
+    hint: 'Click on button!',
+    slug: 'outline-round-button-1',
+    category: 'Button',
+    tags: [
+      'Outline',
+      'Glow',
+      'Round'
+    ],
+    css: `
       .ezy-outline-round-button-1 {
         background-color: transparent;
         border: 2px solid #ec4899;
@@ -138,25 +138,25 @@ export const snippets: CodeSnippetData[] = [
       
 
               `
-        ,
-        html: `
+    ,
+    html: `
       <button class="ezy-outline-round-button-1">
        Button
     </button>
               `
-        ,
-        hiddenStyle: ''
-    },
-    {
-        name: "Outline Checkbox",
-        hint: 'Click on checkbox!',
-        slug: 'outline-checkbox-1',
-        category: 'Checkbox',
-        tags: [
-            'Outline',
-            'Round'
-        ],
-        css: `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Outline Checkbox",
+    hint: 'Click on checkbox!',
+    slug: 'outline-checkbox-1',
+    category: 'Checkbox',
+    tags: [
+      'Outline',
+      'Round'
+    ],
+    css: `
       .ezy-outline-checkbox-1 {
         appearance: none;
         width: 30px;
@@ -173,22 +173,22 @@ export const snippets: CodeSnippetData[] = [
         background-repeat: no-repeat;
       }
               `
-        ,
-        html: `
+    ,
+    html: `
       <input type="checkbox" class="ezy-outline-checkbox-1"/>
               `
-        ,
-        hiddenStyle: ''
-    },
-    {
-        name: "Checkbox",
-        hint: 'Click on Checkbox!',
-        slug: 'checkbox-123',
-        category: 'Checkbox',
-        tags: [
-            'Round'
-        ],
-        css: `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Checkbox",
+    hint: 'Click on Checkbox!',
+    slug: 'checkbox-123',
+    category: 'Checkbox',
+    tags: [
+      'Round'
+    ],
+    css: `
       .clear {
         clear: both;
       }
@@ -232,8 +232,8 @@ export const snippets: CodeSnippetData[] = [
       }
 
               `
-        ,
-        html: `
+    ,
+    html: `
       <div class="content">
   <label class="ezy-checkbox-123">
     <input id="ch1" type="checkbox">
@@ -241,7 +241,211 @@ export const snippets: CodeSnippetData[] = [
   </label>
 </div>
               `
-        ,
-        hiddenStyle: ''
-    },
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Pulse Loader",
+    hint: '',
+    slug: 'pulse-loader-1',
+    category: 'Loader',
+    tags: [
+      'Pulse',
+      'Loader'
+    ],
+    css: `
+        .ezy-pulse-loader {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+        }
+        .ezy-pulse-loader div {
+            width: 20px;
+            height: 20px;
+            background-color: #ec4899;
+            border-radius: 50%;
+            animation: ezy-pulse 1.5s infinite ease-in-out;
+        }
+        .ezy-pulse-loader div:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .ezy-pulse-loader div:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        @keyframes ezy-pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+            `
+    ,
+    html: `
+    <div class="ezy-pulse-loader">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+            `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Rotating Square Loader",
+    hint: '',
+    slug: 'rotating-square-loader-1',
+    category: 'Loader',
+    tags: [
+      'Rotating',
+      'Loader'
+    ],
+    css: `
+        .ezy-rotating-square-loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .ezy-rotating-square-loader div {
+            width: 40px;
+            height: 40px;
+            background-color: #ec4899;
+            animation: ezy-rotate 1.2s linear infinite;
+        }
+        .ezy-rotating-square-loader div:nth-child(2) {
+            animation-delay: -0.6s;
+        }
+        @keyframes ezy-rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+            `
+    ,
+    html: `
+    <div class="ezy-rotating-square-loader">
+        <div></div>
+        <div></div>
+    </div>
+            `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Bouncing Balls Loader",
+    hint: '',
+    slug: 'bouncing-balls-loader-1',
+    category: 'Loader',
+    tags: [
+      'Bouncing',
+      'Loader'
+    ],
+    css: `
+        .ezy-bouncing-ball-loader {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+        }
+        .ezy-bouncing-ball-loader div {
+            width: 20px;
+            height: 20px;
+            background-color: #ec4899;
+            border-radius: 50%;
+            animation: ezy-bounce 1s infinite ease-in-out;
+        }
+        .ezy-bouncing-ball-loader div:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .ezy-bouncing-ball-loader div:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        @keyframes ezy-bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+            `
+    ,
+    html: `
+    <div class="ezy-bouncing-ball-loader">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+            `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Spinning Dots Loader",
+    hint: '',
+    slug: 'spinning-dots-loader-1',
+    category: 'Loader',
+    tags: [
+      'Spinning',
+      'Loader'
+    ],
+    css: `
+        .ezy-spinning-dots-loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .ezy-spinning-dots-loader div {
+            width: 20px;
+            height: 20px;
+            background-color: #ec4899;
+            border-radius: 50%;
+            position: absolute;
+            animation: ezy-spin 1.2s linear infinite;
+        }
+        .ezy-spinning-dots-loader div:nth-child(1) {
+            animation-delay: 0s;
+            transform: rotate(0deg);
+        }
+        .ezy-spinning-dots-loader div:nth-child(2) {
+            animation-delay: 0.4s;
+            transform: rotate(120deg);
+        }
+        .ezy-spinning-dots-loader div:nth-child(3) {
+            animation-delay: 0.8s;
+            transform: rotate(240deg);
+        }
+        @keyframes ezy-spin {
+            0% {
+                transform: rotate(0deg) translateX(30px) rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg) translateX(30px) rotate(-360deg);
+            }
+        }
+            `
+    ,
+    html: `
+    <div class="ezy-spinning-dots-loader">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+            `
+    ,
+    hiddenStyle: ''
+  },
 ];

@@ -448,4 +448,66 @@ export const snippets: CodeSnippetData[] = [
     ,
     hiddenStyle: ''
   },
+  {
+    name: "Fading Bars Loader",
+    hint: '',
+    slug: 'fading-bars-loader-1',
+    category: 'Loader',
+    tags: [
+      'Fade',
+      'Loader'
+    ],
+    css: `
+        .ezy-fading-bar-loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .ezy-fading-bar-loader div {
+            width: 10px;
+            height: 50px;
+            background-color: #ec4899;
+            margin: 0 5px;
+            animation: ezy-fade 1.5s infinite ease-in-out;
+        }
+        .ezy-fading-bar-loader div:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .ezy-fading-bar-loader div:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+        .ezy-fading-bar-loader div:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        .ezy-fading-bar-loader div:nth-child(4) {
+            animation-delay: 0.9s;
+        }
+        @keyframes ezy-fade {
+            0% {
+                opacity: 0.2;
+                transform: translateY(0);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 0.2;
+                transform: translateY(0);
+            }
+        }
+            `
+    ,
+    html: `
+    <div class="ezy-fading-bar-loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+            `
+    ,
+    hiddenStyle: ''
+  },
 ];

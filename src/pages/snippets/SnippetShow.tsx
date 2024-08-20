@@ -29,7 +29,7 @@ const SnippetShow = () => {
 
 
     return (
-        <div className="mt-16">
+        <div className="pt-16">
             <Helmet>
                 <title>Output of {selected?.name ? selected?.name : ''} | Ezy Fast UI</title>
                 <link rel="canonical" href={`https://fastui.ezyhow.com/#/${type}/${slug}`} />
@@ -38,10 +38,10 @@ const SnippetShow = () => {
                 <div className="col-span-1 w-full pl-5 pr-5 pb-10">
                     {selected ? (
                         <>
-                            <div className="flex justify-start items-center">
+                            <div className="flex justify-start items-center mb-5 pb-5 border-b-2 border-gray-400 flex-col lg:flex-row gap-2">
                                 <Link
                                     to={`/list/${type}`}
-                                    className="flex justify-start items-center text-sm text-orange-200 active:translate-y-0.5 hover:text-white ml-2 animate-pulse"
+                                    className="flex justify-start items-center text-normal text-orange-200 active:translate-y-0.5 hover:text-white ml-2"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ const SnippetShow = () => {
                                         viewBox="0 0 24 24"
                                         strokeWidth="1.5"
                                         stroke="currentColor"
-                                        className="w-4 h-4 mr-1"
+                                        className="w-5 h-5 mr-1"
                                     >
                                         <path
                                             strokeLinecap="round"
@@ -57,9 +57,9 @@ const SnippetShow = () => {
                                             d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
                                         />
                                     </svg>
-                                    Back
+                                    All {type}
                                 </Link>
-                                <h3 className="text-center mb-5 text-white text-3xl font-bold flex-1">{selected?.name}</h3>
+                                <h3 className="text-center text-white text-3xl font-bold flex-1">{selected?.name}</h3>
                             </div>
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                                 <div className='grid grid-cols-1'>

@@ -1,6 +1,5 @@
 
 import { Route, Routes } from 'react-router-dom'
-import './App.css'
 import About from './pages/about/About'
 import List from './pages/snippets/List'
 import SnippetList from './pages/snippets/SnippetList'
@@ -10,7 +9,7 @@ import NotFound from './pages/error/NotFound'
 import HomePage from './pages/homepage/HomePage'
 
 const allowedTypes = ['snippets', 'animations'];
-function App() {
+function AppRoutes() {
 
   return (
     <>
@@ -35,4 +34,4 @@ function App() {
   )
 }
 
-export default App
+export default AppRoutes

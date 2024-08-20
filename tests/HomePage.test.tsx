@@ -1,7 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest';
 
-import App from '../src/App'
 import { HashRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import React from 'react';

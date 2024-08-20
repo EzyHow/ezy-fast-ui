@@ -7,6 +7,7 @@ import React from 'react';
 import SnippetList from '../src/pages/snippets/SnippetList';
 import { snippets } from '../src/data/snippets';
 import { animations } from '../src/data/animations';
+import AppRoutes from '../src/AppRoutes';
 
 describe('Renders list page correctly', async () => {
 
@@ -14,9 +15,7 @@ describe('Renders list page correctly', async () => {
         return render(
             <HelmetProvider>
                 <MemoryRouter initialEntries={initialEntries}>
-                    <Routes>
-                        <Route path="/list/:type" element={<SnippetList />} />
-                    </Routes>
+                    <AppRoutes />
                 </MemoryRouter>
             </HelmetProvider>
         );

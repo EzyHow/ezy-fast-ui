@@ -5,7 +5,7 @@ import {
   HashRouter,
 } from "react-router-dom";
 import NavigationHeader from './components/NavigationHeader.tsx';
-import App from './App.tsx';
+import AppRoutes from './AppRoutes.tsx';
 import Footer from './components/Footer.tsx';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -18,7 +18,7 @@ createRoot(document.getElementById('root')!).render(
         <HashRouter>
           <NavigationHeader />
           <div className="max-w-7xl mx-auto min-h-[calc(100vh-120px)]">
-            <App />
+            <AppRoutes />
           </div>
           <Footer />
         </HashRouter>

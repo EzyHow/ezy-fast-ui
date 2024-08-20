@@ -72,7 +72,7 @@ const SnippetShow = () => {
                                         <CodeViewer code={selected?.css} language="css" heading="CSS" />
                                     )}
                                     {selected?.js && (
-                                        <CodeViewer code={selected?.js} language="js" heading="JavaScript" />
+                                        <CodeViewer code={selected?.js} language="js" heading="JS" />
                                     )}
                                 </div>
                             </div>

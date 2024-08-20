@@ -29,9 +29,9 @@ describe('Renders list page correctly', async () => {
         const iframes = container.querySelectorAll('iframe');
 
         const snippetHeading = screen.queryAllByText(randomSnippet.name);
-        const htmlBox = screen.queryByText('HTML');
-        const cssBox = screen.queryByText('CSS');
-        const javascriptBox = screen.queryByText('JS');
+        const htmlBox = screen.queryAllByText('HTML');
+        const cssBox = screen.queryAllByText('CSS');
+        const javascriptBox = screen.queryAllByText('JS');
 
         // Expectations
         expect(iframes.length).toBeGreaterThan(0);
@@ -45,8 +45,9 @@ describe('Renders list page correctly', async () => {
 
         if (randomSnippet.js && randomSnippet.js !== '') {
             expect(javascriptBox).not.toBeNull();
+            expect(javascriptBox.length).toBeGreaterThan(0);
         } else {
-            expect(javascriptBox).toBeNull();
+            expect(javascriptBox.length).toBe(0);
         }
     });
 
@@ -57,9 +58,9 @@ describe('Renders list page correctly', async () => {
         const iframes = container.querySelectorAll('iframe');
 
         const animationHeading = screen.queryAllByText(randomAnimation.name);
-        const htmlBox = screen.queryByText('HTML');
-        const cssBox = screen.queryByText('CSS');
-        const javascriptBox = screen.queryByText('JS');
+        const htmlBox = screen.queryAllByText('HTML');
+        const cssBox = screen.queryAllByText('CSS');
+        const javascriptBox = screen.queryAllByText('JS');
 
         // Expectations
         expect(iframes.length).toBeGreaterThan(0);
@@ -73,8 +74,9 @@ describe('Renders list page correctly', async () => {
 
         if (randomAnimation.js && randomAnimation.js !== '') {
             expect(javascriptBox).not.toBeNull();
+            expect(javascriptBox.length).toBeGreaterThan(0);
         } else {
-            expect(javascriptBox).toBeNull();
+            expect(javascriptBox.length).toBe(0);
         }
     });
 
@@ -87,9 +89,9 @@ describe('Renders list page correctly', async () => {
         const iframes = container.querySelectorAll('iframe');
 
         const snippetHeading = screen.queryAllByText(randomSnippet.name);
-        const htmlBox = screen.queryByText('HTML');
-        const cssBox = screen.queryByText('CSS');
-        const javascriptBox = screen.queryByText('JS');
+        const htmlBox = screen.queryAllByText('HTML');
+        const cssBox = screen.queryAllByText('CSS');
+        const javascriptBox = screen.queryAllByText('JS');
 
         // Expectations
         expect(iframes.length).toBeGreaterThan(0);
@@ -102,8 +104,9 @@ describe('Renders list page correctly', async () => {
         expect(cssBox).not.toBeNull();
         if (randomSnippet.js && randomSnippet.js !== '') {
             expect(javascriptBox).not.toBeNull();
+            expect(javascriptBox.length).toBeGreaterThan(0);
         } else {
-            expect(javascriptBox).toBeNull();
+            expect(javascriptBox.length).toBe(0);
         }
     });
 
@@ -114,9 +117,9 @@ describe('Renders list page correctly', async () => {
             const iframes = container.querySelectorAll('iframe');
 
             const snippetHeading = screen.queryAllByText(snippet.name);
-            const htmlBox = screen.queryByText('HTML');
-            const cssBox = screen.queryByText('CSS');
-            const javascriptBox = screen.queryByText('JS');
+            const htmlBox = screen.queryAllByText('HTML');
+            const cssBox = screen.queryAllByText('CSS');
+            const javascriptBox = screen.queryAllByText('JS');
 
             // Expectations
             expect(iframes.length).toBeGreaterThan(0);
@@ -129,8 +132,9 @@ describe('Renders list page correctly', async () => {
             expect(cssBox).not.toBeNull();
             if (snippet.js && snippet.js !== '') {
                 expect(javascriptBox).not.toBeNull();
+                expect(javascriptBox.length).toBeGreaterThan(0);
             } else {
-                expect(javascriptBox).toBeNull();
+                expect(javascriptBox.length).toBe(0);
             }
             cleanup();
         });
@@ -143,9 +147,9 @@ describe('Renders list page correctly', async () => {
             const iframes = container.querySelectorAll('iframe');
 
             const animationHeading = screen.queryAllByText(animation.name);
-            const htmlBox = screen.queryByText('HTML');
-            const cssBox = screen.queryByText('CSS');
-            const javascriptBox = screen.queryByText('JS');
+            const htmlBox = screen.queryAllByText('HTML');
+            const cssBox = screen.queryAllByText('CSS');
+            const javascriptBox = screen.queryAllByText('JS');
 
             // Expectations
             expect(iframes.length).toBeGreaterThan(0);
@@ -158,8 +162,9 @@ describe('Renders list page correctly', async () => {
             expect(cssBox).not.toBeNull();
             if (animation.js && animation.js !== '') {
                 expect(javascriptBox).not.toBeNull();
+                expect(javascriptBox.length).toBeGreaterThan(0);
             } else {
-                expect(javascriptBox).toBeNull();
+                expect(javascriptBox.length).toBe(0);
             }
             cleanup();
         });

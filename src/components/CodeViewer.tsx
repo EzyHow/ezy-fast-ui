@@ -9,7 +9,7 @@ const CodeViewer = ({ code = '<h1>Ezy Code Snippets!!!</h1>', language = 'html',
                     <div className="absolute top-2 left-4">
                         <h3 className="text-fuchsia-200">{heading}</h3>
                     </div>
-                    <div className="sm:pr-8 h-full max-h-52 overflow-auto pb-6">
+                    <div className="sm:pr-8 h-full max-h-52 overflow-auto pb-6 min-h-[332px]">
                         <pre dangerouslySetInnerHTML={{ __html: Prism.highlight(code, Prism.languages[language], language) }} />
                     </div>
                     <div className="absolute right-2 bottom-6">

@@ -510,4 +510,129 @@ export const snippets: CodeSnippetData[] = [
     ,
     hiddenStyle: ''
   },
+  {
+    name: "Button With Fading Bars Loader",
+    hint: '',
+    slug: 'ezy-button-with-loader-1',
+    category: 'Button',
+    tags: [
+      'Fade',
+      'Loader',
+      'Button'
+    ],
+    css: `
+        .ezy-button-with-loader {
+            position: relative;
+            text-align: center;
+        }
+
+        .ezy-button-with-loader button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #ec4899;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+            overflow: hidden;
+            display: inline-block;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .ezy-button-with-loader button:hover {
+            background-color: #ca2a7a;
+        }
+
+        .ezy-button-with-loader button:active {
+            background-color: #ca2a7a;
+            transform: translateY(1px);
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .ezy-button-with-loader .ezy-fading-bar-loader {
+            display: none;
+        }
+
+
+        .ezy-fading-bar-loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ezy-fading-bar-loader div {
+            width: 10px;
+            height: 50px;
+            background-color: #ec4899;
+            margin: 0 5px;
+            animation: ezy-fade 1.5s infinite ease-in-out;
+        }
+
+        .ezy-fading-bar-loader div:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .ezy-fading-bar-loader div:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .ezy-fading-bar-loader div:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .ezy-fading-bar-loader div:nth-child(4) {
+            animation-delay: 0.9s;
+        }
+
+        @keyframes ezy-fade {
+            0% {
+                opacity: 0.2;
+                transform: translateY(0);
+            }
+
+            50% {
+                opacity: 1;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 0.2;
+                transform: translateY(0);
+            }
+        }
+            `
+    ,
+    html: `
+    <div class="ezy-button-with-loader">
+        <button>Submit</button>
+        <div class="ezy-fading-bar-loader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+            `
+    ,
+    js: `
+        
+        const button = document.querySelector('.ezy-button-with-loader button');
+        const loader = document.querySelector('.ezy-button-with-loader .ezy-fading-bar-loader');
+        if (button && loader) {
+            button.addEventListener('click', () => {
+                button.style.display = 'none';
+                loader.style.display = 'flex';
+
+                // Simulate loading, replace it with your logic
+                setTimeout(() => {
+                    button.style.display = 'inline-block';
+                    loader.style.display = 'none';
+                }, 3000);
+            });
+        }
+    `,
+    hiddenStyle: ''
+  },
 ];

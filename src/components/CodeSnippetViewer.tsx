@@ -46,7 +46,11 @@ const CodeSnippetViewer: React.FC<CodeSnippetProps> = ({ snippet, isCollectionVi
                         <div class="output">
                             ${snippet.html}
                         </div>
-                        <script>${snippet.js}</script>
+                        <script>
+                            (function scopedExecution() {
+                                ${snippet.js}
+                            })();
+                        </script>
                     </body>
                     </html>
                 `);

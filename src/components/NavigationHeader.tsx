@@ -79,6 +79,10 @@ export default function NavigationHeader() {
                                     className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-200"
                                 >Snippets</Link>
                                 <Link
+                                    to="/css-box-shadow-generator"
+                                    className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-200"
+                                >Box Shadow Generator</Link>
+                                <Link
                                     to="/about"
                                     className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-200"
                                 >About</Link>

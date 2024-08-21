@@ -550,5 +550,259 @@ export const animations: CodeSnippetData[] = [
           `,
     hiddenStyle: ''
 
+  },
+  {
+    name: "Gradient Border Animation",
+    hint: 'You can increase/decrease the speed of the animation in CSS.',
+    slug: 'gradient-border-animation-1',
+    category: 'Infinite',
+    showReplayButton: true,
+    tags: [
+      'Border', 'Infinite', 'Gradient'
+    ],
+    css: `
+        @keyframes ezy-rotate {
+          from {
+            transform: rotate(0);
+          }
+
+          to {
+            transform: rotate(360deg);
+          }
+        }
+                  
+        .box {
+          width: 100px;
+          height: 100px;
+          background-color: #222;
+          border: 2px solid #000;
+          border-radius: 5px;
+          cursor: pointer;
+          margin: 6px;
+          z-index: 1;
+        }
+
+        .outer {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          border-radius: 5px;
+        }
+
+        .outer::before {
+          content: "";
+          display: block;
+          background: linear-gradient(
+            90deg,
+            hsla(351, 81%, 60%, 1) 50%,
+            hsla(156, 100%, 50%, 1) 80%
+          );
+          height: 500px;
+          width: 500px;
+          position: absolute;
+          animation: ezy-rotate 3s linear infinite;
+          z-index: 0;
+        }
+    `,
+    html: `
+          <div class="outer">
+            <div class="box">
+            </div>
+          </div>
+          `,
+    hiddenStyle: ''
+
+  },
+  {
+    name: "Border Animation",
+    hint: 'You can increase/decrease the speed of the animation in CSS.',
+    slug: 'border-animation-2',
+    category: 'Infinite',
+    showReplayButton: true,
+    tags: [
+      'Border', 'Infinite',
+    ],
+    css: `
+        @keyframes ezy-rotate {
+          from {
+            transform: rotate(0);
+          }
+
+          to {
+            transform: rotate(360deg);
+          }
+        }
+                  
+        .box {
+          width: 100px;
+          height: 100px;
+          background-color: #EB455F;
+          border-radius: 5px;
+          cursor: pointer;
+          margin: 2px;
+          z-index: 1;
+        }
+
+        .outer {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          border-radius: 5px;
+        }
+
+        .outer::before {
+          content: "";
+          display: block;
+          background: linear-gradient(
+            90deg,
+            rgba(0,0,0,0) 46%,
+            rgba(255,255,255,1) 50%,
+            rgba(0,0,0,0) 54%
+          );
+          height: 500px;
+          width: 500px;
+          position: absolute;
+          animation: ezy-rotate 8s linear infinite;
+          z-index: 0;
+        }
+    `,
+    html: `
+          <div class="outer">
+            <div class="box">
+            </div>
+          </div>
+          `,
+    hiddenStyle: ''
+
+  },
+  {
+    name: "Line Border Animation",
+    hint: 'You can increase/decrease the speed of the animation in CSS.',
+    slug: 'line-border-animation-1',
+    category: 'Infinite',
+    showReplayButton: true,
+    tags: [
+      'Border', 'Infinite',
+    ],
+    css: `
+        @keyframes ezy-animation {
+          from {
+            stroke-dashoffset: 0;
+          }
+          to {
+            stroke-dashoffset: 1000;
+          }
+        }
+                  
+        .box {
+          width: 100px;
+          height: 100px;
+          background-color: #EB455F;
+          border-radius: 5px;
+          cursor: pointer;
+          z-index: 1;
+        }
+
+        .outer {
+          position: relative;
+        }
+
+        .outer svg {
+          position: absolute;
+        }
+
+        .outer .line {
+          stroke-dasharray: 50;
+          stroke-width: 4px;
+          fill: transparent;
+          stroke: rgba(78, 255, 13, 0.5);
+          animation: ezy-animation 5s linear infinite;
+        }
+    `,
+    html: `
+          <div class="outer">
+            <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+              <rect
+                rx="8"
+                ry="8"
+                class="line"
+                height="100%"
+                width="100%"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div class="box">
+            </div>
+          </div>
+          `,
+    hiddenStyle: ''
+
+  },
+  {
+    name: "Line Border Animation 2",
+    hint: 'You can increase/decrease the speed of the animation in CSS.',
+    slug: 'line-border-animation-2',
+    category: 'Infinite',
+    showReplayButton: true,
+    tags: [
+      'Border', 'Infinite',
+    ],
+    css: `
+        @keyframes ezy-animation {
+          from {
+            stroke-dashoffset: 0;
+          }
+          to {
+            stroke-dashoffset: 1200;
+          }
+        }
+                  
+        .box {
+          width: 100px;
+          height: 100px;
+          background-color: #EB455F;
+          border-radius: 5px;
+          cursor: pointer;
+          z-index: 1;
+        }
+
+        .outer {
+          position: relative;
+        }
+
+        .outer svg {
+          position: absolute;
+        }
+
+        .outer .line {
+          stroke-dasharray: 300;
+          stroke-width: 4px;
+          fill: transparent;
+          stroke: rgba(255, 255, 0, 0.8);
+          animation: ezy-animation 5s linear infinite;
+        }
+    `,
+    html: `
+          <div class="outer">
+            <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+              <rect
+                rx="8"
+                ry="8"
+                class="line"
+                height="100%"
+                width="100%"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div class="box">
+            </div>
+          </div>
+          `,
+    hiddenStyle: ''
+
   }
 ];

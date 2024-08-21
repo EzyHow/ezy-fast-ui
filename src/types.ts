@@ -3,7 +3,7 @@ export const CodeSnippetCategories = [
 ] as const;
 
 export const AnimationCategories = [
-    'Hover', 'Entry', 'Exit'
+    'Hover', 'Entry', 'Exit', 'Infinite'
 ] as const;
 
 export interface CodeSnippetData {

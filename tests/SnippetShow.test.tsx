@@ -1,7 +1,7 @@
-import { cleanup, render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest';
 
-import { MemoryRouter, Route, Routes } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import React from 'react';
 import { snippets } from '../src/data/snippets';
@@ -110,8 +110,8 @@ describe('Renders list page correctly', async () => {
         }
     });
 
-    it('Should render each snippet', async () => {
-        snippets.forEach(async (snippet) => {
+    snippets.forEach(async (snippet) => {
+        it(`Should render snippet: ${snippet.slug}`, async () => {
             // Setup
             const { container } = renderWithRouter([`/snippets/${snippet.slug}`]);
             const iframes = container.querySelectorAll('iframe');
@@ -136,12 +136,11 @@ describe('Renders list page correctly', async () => {
             } else {
                 expect(javascriptBox.length).toBe(0);
             }
-            cleanup();
         });
     });
 
-    it('Should render each animation', async () => {
-        animations.forEach(async (animation) => {
+    animations.forEach(async (animation) => {
+        it(`Should render animation: ${animation.slug}`, async () => {
             // Setup
             const { container } = renderWithRouter([`/animations/${animation.slug}`]);
             const iframes = container.querySelectorAll('iframe');
@@ -166,7 +165,6 @@ describe('Renders list page correctly', async () => {
             } else {
                 expect(javascriptBox.length).toBe(0);
             }
-            cleanup();
         });
     });
 

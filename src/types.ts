@@ -1,5 +1,5 @@
 export const CodeSnippetCategories = [
-    'Button', 'Loader', 'Checkbox'
+    'Button', 'Loader', 'Checkbox', 'Avatar'
 ] as const;
 
 export const AnimationCategories = [

@@ -635,4 +635,120 @@ export const snippets: CodeSnippetData[] = [
     `,
     hiddenStyle: ''
   },
+  {
+    name: "Round Avatar",
+    hint: '',
+    slug: 'ezy-avatar-1',
+    category: 'Avatar',
+    tags: [
+      'Round',
+      'Avatar',
+    ],
+    css: `
+        .ezy-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 2px solid #000;
+            box-shadow: 0 0 0 4px #ec4899, 0 0 0 8px #000;
+        }
+            `
+    ,
+    html: `
+    <div>
+        <img class="ezy-avatar"
+        src="https://plus.unsplash.com/premium_vector-1714618927767-b7606cc6c88c?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Avatar" width="200" height="200"/>
+    </div>
+            `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Square Avatar",
+    hint: '',
+    slug: 'ezy-avatar-square-1',
+    category: 'Avatar',
+    tags: [
+      'Square',
+      'Avatar',
+    ],
+    css: `
+        .ezy-avatar-square {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            border: 2px solid #000;
+            box-shadow: 0 0 0 4px #ec4899, 0 0 0 8px #000;
+        }
+            `
+    ,
+    html: `
+    <div>
+        <img class="ezy-avatar-square"
+        src="https://plus.unsplash.com/premium_vector-1714618927767-b7606cc6c88c?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Avatar" width="200" height="200"/>
+    </div>
+            `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Round Avatar with Shadow",
+    hint: '',
+    slug: 'ezy-avatar-2',
+    category: 'Avatar',
+    tags: [
+      'Round',
+      'Avatar',
+    ],
+    css: `
+        .ezy-avatar-with-shadow {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 2px solid #000;
+            box-shadow: 0px 0px 16px 5px #ec4899;
+        }
+            `
+    ,
+    html: `
+    <div>
+        <img class="ezy-avatar-with-shadow"
+        src="https://plus.unsplash.com/premium_vector-1714618927767-b7606cc6c88c?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Avatar" width="200" height="200"/>
+    </div>
+            `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Square Avatar with Shadow",
+    hint: '',
+    slug: 'ezy-avatar-3',
+    category: 'Avatar',
+    tags: [
+      'Square',
+      'Avatar',
+    ],
+    css: `
+        .ezy-square-avatar-with-shadow {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            border: 2px solid #000;
+            box-shadow: 0px 0px 16px 5px #ec4899;
+        }
+            `
+    ,
+    html: `
+    <div>
+        <img class="ezy-square-avatar-with-shadow"
+        src="https://plus.unsplash.com/premium_vector-1714618927767-b7606cc6c88c?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Avatar" width="200" height="200"/>
+    </div>
+            `
+    ,
+    hiddenStyle: ''
+  },
 ];

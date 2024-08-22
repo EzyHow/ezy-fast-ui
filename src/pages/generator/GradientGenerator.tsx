@@ -10,8 +10,8 @@ const randomColor = () => {
 
 const GradientGenerator: React.FC = () => {
     const [colors, setColors] = useState<{ color: string; stop: number }[]>([
-        { color: '#ff7e5fff', stop: 30 },
-        { color: '#feb47bff', stop: 60 },
+        { color: randomColor(), stop: 10 },
+        { color: randomColor(), stop: 20 },
     ]);
     const [angle, setAngle] = useState(45);
     const [gradientType, setGradientType] = useState<'linear' | 'radial'>('linear');
@@ -33,7 +33,7 @@ const GradientGenerator: React.FC = () => {
 
 
     const handleAddColor = () => {
-        setColors([...colors, { color: randomColor(), stop: 100 }]); // Add a default color with 100% stop and full opacity
+        setColors([...colors, { color: randomColor(), stop: (colors.length * 10 + 10) % 100 }]); // Add a default color with 100% stop and full opacity
     };
 
     const handleRemoveColor = (index: number) => {
@@ -226,7 +226,7 @@ const GradientGenerator: React.FC = () => {
                     <div className="">
                         <div className="block font-medium mb-1">Preview:</div>
                         <div
-                            className="h-64 bg-gray-600 rounded-lg"
+                            className="h-64 bg-gray-600 rounded-lg shadow-lg"
                             style={{ background: gradient }}
                         >
                         </div>

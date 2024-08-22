@@ -16,6 +16,7 @@ const GradientGenerator: React.FC = () => {
     const [angle, setAngle] = useState(45);
     const [gradientType, setGradientType] = useState<'linear' | 'radial'>('linear');
     const [oldBrowserSupport, setOldBrowserSupport] = useState(false);
+    const [withStop, setWithStop] = useState(false);
 
 
     const handleColorChange = (index: number, color: string) => {
@@ -46,33 +47,33 @@ const GradientGenerator: React.FC = () => {
         if (gradientType === 'linear') {
             if (oldBrowserSupport) {
                 return `
-    background: -moz-linear-gradient(${angle}deg, ${colors.map(c => `${c.color} ${c.stop}%`).join(', ')})
-    background: -webkit-linear-gradient(${angle}deg, ${colors.map(c => `${c.color} ${c.stop}%`).join(', ')})
-    background: linear-gradient(${angle}deg, ${colors.map(c => `${c.color} ${c.stop}%`).join(', ')})
+    background: -moz-linear-gradient(${angle}deg, ${colors.map(c => `${c.color} ${withStop ? (c.stop + '%') : ''}`).join(', ')})
+    background: -webkit-linear-gradient(${angle}deg, ${colors.map(c => `${c.color} ${withStop ? (c.stop + '%') : ''}`).join(', ')})
+    background: linear-gradient(${angle}deg, ${colors.map(c => `${c.color} ${withStop ? (c.stop + '%') : ''}`).join(', ')})
             `;
             }
             return `
-    background: linear-gradient(${angle}deg, ${colors.map(c => `${c.color} ${c.stop}%`).join(', ')});
+    background: linear-gradient(${angle}deg, ${colors.map(c => `${c.color} ${withStop ? (c.stop + '%') : ''}`).join(', ')});
             `;
         } else {
             if (oldBrowserSupport) {
                 return `
-    background: -moz-radial-gradient(circle, ${colors.map(c => `${c.color} ${c.stop}%`).join(', ')});
-    background: -webkit-radial-gradient(circle, ${colors.map(c => `${c.color} ${c.stop}%`).join(', ')});
-    background: radial-gradient(circle, ${colors.map(c => `${c.color} ${c.stop}%`).join(', ')});
+    background: -moz-radial-gradient(circle, ${colors.map(c => `${c.color} ${withStop ? (c.stop + '%') : ''}`).join(', ')});
+    background: -webkit-radial-gradient(circle, ${colors.map(c => `${c.color} ${withStop ? (c.stop + '%') : ''}`).join(', ')});
+    background: radial-gradient(circle, ${colors.map(c => `${c.color} ${withStop ? (c.stop + '%') : ''}`).join(', ')});
             `;
             }
             return `
-    background: radial-gradient(circle, ${colors.map(c => `${c.color} ${c.stop}%`).join(', ')});
+    background: radial-gradient(circle, ${colors.map(c => `${c.color} ${withStop ? (c.stop + '%') : ''}`).join(', ')});
             `;
         }
     };
 
     const gradient = gradientType === 'linear'
         ?
-        `linear-gradient(${angle}deg, ${colors.map(c => `${c.color} ${c.stop}%`).join(', ')})`
+        `linear-gradient(${angle}deg, ${colors.map(c => `${c.color} ${withStop ? (c.stop + '%') : ''}`).join(', ')})`
         :
-        `radial-gradient(circle, ${colors.map(c => `${c.color} ${c.stop}%`).join(', ')})`;
+        `radial-gradient(circle, ${colors.map(c => `${c.color} ${withStop ? (c.stop + '%') : ''}`).join(', ')})`;
 
 
     return (
@@ -95,7 +96,16 @@ const GradientGenerator: React.FC = () => {
                                 onChange={(e) => setOldBrowserSupport(e.target.checked)}
                                 className="w-5 h-5 ml-2"
                             />
+                        </div>
 
+                        <div className="flex items-center justify-end mb-2 text-right">
+                            <label className="inline font-bold">With Stops:</label>
+                            <input
+                                type="checkbox"
+                                checked={withStop}
+                                onChange={(e) => setWithStop(e.target.checked)}
+                                className="w-5 h-5 ml-2"
+                            />
                         </div>
 
                         <div className="mb-8">
@@ -160,29 +170,26 @@ const GradientGenerator: React.FC = () => {
 
                                 {colors.map((color, index) => (
                                     <div key={index} className="flex flex-col mb-2 border border-gray-100 p-4 rounded-lg w-full relative">
-                                        {/* <input
-                                    type="color"
-                                    value={color.color}
-                                    onChange={(e) => handleColorChange(index, e.target.value)}
-                                    className="w-12 h-12 border border-gray-700 rounded"
-                                /> */}
-                                        <div className="flex mb-4" data-testid={`color`}>
+
+                                        <div className="flex" data-testid={`color`}>
                                             <PopoverPicker color={color.color} onChange={(color) => handleColorChange(index, color)} />
                                             <HexColorInput data-testid={`color-input`} className='ml-4 w-28 uppercase bg-gray-900 text-white px-2 py-1 rounded-md' color={color.color} onChange={(color) => handleColorChange(index, color)} alpha prefixed />
                                         </div>
-                                        <div className='flex w-full items-center'>
-                                            <label className="block font-medium mb-1" htmlFor='stop'>Stop:</label>
-                                            <input
-                                                type="range"
-                                                value={color.stop}
-                                                onChange={(e) => handleStopChange(index, Number(e.target.value))}
-                                                className="ml-2 flex-1 w-full border border-gray-700 rounded p-2 bg-gray-900 text-gray-100"
-                                                min={0}
-                                                max={100}
-                                                step={0.1}
-                                            />
-                                            <span className="ml-2 text-gray-100">{color.stop}%</span>
-                                        </div>
+                                        {withStop && (
+                                            <div className='flex w-full items-center mt-4'>
+                                                <label className="block font-medium mb-1" htmlFor='stop'>Stop:</label>
+                                                <input
+                                                    type="range"
+                                                    value={color.stop}
+                                                    onChange={(e) => handleStopChange(index, Number(e.target.value))}
+                                                    className="ml-2 flex-1 w-full border border-gray-700 rounded p-2 bg-gray-900 text-gray-100"
+                                                    min={0}
+                                                    max={100}
+                                                    step={0.1}
+                                                />
+                                                <span className="ml-2 text-gray-100">{color.stop}%</span>
+                                            </div>
+                                        )}
 
 
                                         {colors.length > 2 && (

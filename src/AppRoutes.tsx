@@ -8,6 +8,7 @@ import ErrorPage from './error-page'
 import NotFound from './pages/error/NotFound'
 import HomePage from './pages/homepage/HomePage'
 import BoxShadowGenerator from './pages/generator/BoxShadowGenerator'
+import PrivacyPolicy from './pages/privacy-policy/PrivacyPolicy'
 
 const allowedTypes = ['snippets', 'animations'];
 function AppRoutes() {
@@ -29,6 +30,7 @@ function AppRoutes() {
         }} />
         <Route path="/about" element={<About />} />
         <Route path="/css-box-shadow-generator" element={<BoxShadowGenerator />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="*" element={<NotFound />} errorElement={<ErrorPage />} />
       </Routes>
 

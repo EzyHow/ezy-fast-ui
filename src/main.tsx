@@ -8,6 +8,7 @@ import NavigationHeader from './components/NavigationHeader.tsx';
 import AppRoutes from './AppRoutes.tsx';
 import Footer from './components/Footer.tsx';
 import { HelmetProvider } from 'react-helmet-async';
+import CookiesNotice from './components/CookiesNotice.tsx';
 
 
 
@@ -20,6 +21,7 @@ createRoot(document.getElementById('root')!).render(
           <div className="max-w-7xl mx-auto min-h-[calc(100vh-120px)]">
             <AppRoutes />
           </div>
+          <CookiesNotice />
           <Footer />
         </HashRouter>
         <link

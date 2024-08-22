@@ -7,6 +7,7 @@ Welcome to [**ezy-fast-ui**](https://fastui.ezyhow.com)! This open-source projec
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
+- [Tools](#tools)
 - [License](#license)
 - [Sponsor](#sponsor)
 
@@ -25,6 +26,9 @@ ezy-fast-ui offers a set of pre-designed HTML elements and CSS animations. Simpl
 You don’t need to install anything to use ezy-fast-ui. Simply visit our website and browse the available snippets:
 
 - [fastui.ezyhow.com](https://fastui.ezyhow.com)
+
+## Tools
+Along with open source code snippets, tools like `CSS Box Shadow Generator` and `CSS Gradient Generator` are also available for free use. These tools provide interactive way to generate desired CSS for your projects.
 
 ## License
 ezy-fast-ui is released under the MIT License. You are free to use, modify, and distribute the code in your projects, both personal and commercial, with no restrictions.

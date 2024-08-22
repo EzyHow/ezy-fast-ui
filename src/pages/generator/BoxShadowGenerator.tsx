@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import CodeViewer from '../../components/CodeViewer';
 import { Helmet } from 'react-helmet-async';
+import { PopoverPicker } from '../../components/PopoverColorPicker';
 
 const BoxShadowGenerator: React.FC = () => {
   const [offsetX, setOffsetX] = useState<number>(0);
   const [offsetY, setOffsetY] = useState<number>(0);
-  const [blur, setBlur] = useState<number>(12);
-  const [spread, setSpread] = useState<number>(2);
-  const [color, setColor] = useState<string>('#f0f000');
+  const [blur, setBlur] = useState<number>(30);
+  const [spread, setSpread] = useState<number>(12);
+  const [color, setColor] = useState<string>('#f0f00088');
 
   const boxShadow = `${offsetX}px ${offsetY}px ${blur}px ${spread}px ${color}`;
 
@@ -112,13 +113,14 @@ const BoxShadowGenerator: React.FC = () => {
           </div>
           <div className="flex items-center">
             <label htmlFor="color" className="w-24 font-bold text-xl">Color:</label>
-            <input
+            {/* <input
               id="color"
               type="color"
               value={color}
               onChange={(e) => setColor(e.target.value)}
               className="p-1 mr-4 w-16 h-16 "
-            />
+            /> */}
+            <PopoverPicker color={color} onChange={setColor} />
             <div></div>
           </div>
         </div>

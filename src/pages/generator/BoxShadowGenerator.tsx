@@ -7,7 +7,7 @@ const BoxShadowGenerator: React.FC = () => {
   const [offsetY, setOffsetY] = useState<number>(0);
   const [blur, setBlur] = useState<number>(12);
   const [spread, setSpread] = useState<number>(2);
-  const [color, setColor] = useState<string>('#ffffff');
+  const [color, setColor] = useState<string>('#f0f000');
 
   const boxShadow = `${offsetX}px ${offsetY}px ${blur}px ${spread}px ${color}`;
 
@@ -21,7 +21,7 @@ const BoxShadowGenerator: React.FC = () => {
         <h1 className="text-4xl font-bold text-center">Box Shadow Generator</h1>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
-        <div className="w-full px-6 pt-20 flex flex-col gap-6">
+        <div className="w-full px-6 mt-10 pt-10 flex flex-col gap-6 bg-gray-900 rounded-2xl">
           <div className="flex items-center">
             <label htmlFor="offsetX" className="w-24 font-bold text-xl">Offset X:</label>
             <input

@@ -6,9 +6,10 @@ import useClickOutside from '../hooks/useClickOutside';
 interface PopoverPickerProps {
     color: string;
     onChange: (color: string) => void;
+    css?: string;
 }
 
-export const PopoverPicker: React.FC<PopoverPickerProps> = ({ color, onChange }) => {
+export const PopoverPicker: React.FC<PopoverPickerProps> = ({ color, onChange, css }) => {
     const popover = useRef<HTMLDivElement>(null);
     const [isOpen, toggle] = useState<boolean>(false);
 
@@ -18,7 +19,7 @@ export const PopoverPicker: React.FC<PopoverPickerProps> = ({ color, onChange })
     return (
         <div className="picker relative">
             <div
-                className="w-12 h-12 rounded-lg cursor-pointer border border-gray-100"
+                className={`w-12 h-12 rounded-lg cursor-pointer border border-gray-100 ${css ? css : ''}`}
                 style={{ backgroundColor: color }}
                 onClick={() => toggle(true)}
             />

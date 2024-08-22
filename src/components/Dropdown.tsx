@@ -58,6 +58,7 @@ const Dropdown: React.FC<DropdownProps> = ({ menuLabel, items }) => {
                         {items.map((item, index) => (
                             item?.elementType === 'Link' ? (
                                 <Link
+                                    onClick={close}
                                     key={index}
                                     to={item.href}
                                     className="block px-4 py-2 hover:bg-gray-700"
@@ -66,6 +67,7 @@ const Dropdown: React.FC<DropdownProps> = ({ menuLabel, items }) => {
                                 </Link>
                             ) : (
                                 <a
+                                    onClick={close}
                                     key={index}
                                     href={item.href}
                                     className="block px-4 py-2 hover:bg-gray-700"

@@ -8,7 +8,7 @@ import AppRoutes from '../src/AppRoutes';
 
 
 
-describe('Renders css box shadow generator page correctly', async () => {
+describe('Renders privacy policy page correctly', async () => {
 
     const renderWithRouter = (initialEntries) => {
         return render(
@@ -20,16 +20,17 @@ describe('Renders css box shadow generator page correctly', async () => {
         );
     };
 
-    it('Should render the box shadow generator correctly', async () => {
+    it('Should render the privacy policy correctly', async () => {
         // Setup
-        const { container } = renderWithRouter([`/css-box-shadow-generator`]);
+        const { container } = renderWithRouter([`/privacy-policy`]);
 
-        const heading = screen.queryByText("Box Shadow Generator");
-        const cssBox = screen.queryByText('CSS');
+        const privacyPolicies = screen.queryAllByText("Privacy Policy");
+        const introduction = screen.queryByText('Introduction');
 
-        expect(heading).not.toBeNull();
+        expect(privacyPolicies).not.toBeNull();
+        expect(privacyPolicies.length).toBeGreaterThan(0);
 
-        expect(cssBox).not.toBeNull();
+        expect(introduction).not.toBeNull();
 
     });
 

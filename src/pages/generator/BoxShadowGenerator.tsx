@@ -9,6 +9,7 @@ const BoxShadowGenerator: React.FC = () => {
   const [blur, setBlur] = useState<number>(30);
   const [spread, setSpread] = useState<number>(12);
   const [color, setColor] = useState<string>('#f0f00088');
+  const [oldBrowserSupport, setOldBrowserSupport] = useState(false)
 
   const boxShadow = `${offsetX}px ${offsetY}px ${blur}px ${spread}px ${color}`;
 
@@ -22,7 +23,17 @@ const BoxShadowGenerator: React.FC = () => {
         <h1 className="text-4xl font-bold text-center">Box Shadow Generator</h1>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
-        <div className="w-full px-6 mt-10 pt-10 flex flex-col gap-6 bg-gray-900 rounded-2xl">
+        <div className="w-full px-6 mt-10 pt-10 flex flex-col gap-6 bg-gray-900 rounded-2xl items-center">
+          <div className="flex items-center justify-end mb-2 text-right">
+            <label className="inline font-bold">Old Browser Support:</label>
+            <input
+              type="checkbox"
+              checked={oldBrowserSupport}
+              onChange={(e) => setOldBrowserSupport(e.target.checked)}
+              className="w-5 h-5 ml-2"
+            />
+
+          </div>
           <div className="flex items-center">
             <label htmlFor="offsetX" className="w-24 font-bold text-xl">Offset X:</label>
             <input
@@ -127,12 +138,17 @@ const BoxShadowGenerator: React.FC = () => {
 
         <div className="p-10 lg:p-28">
           <div className="rounded-2xl" style={{ boxShadow }}>
-            <CodeViewer code={`
+            <CodeViewer code={oldBrowserSupport ? `
 box-shadow: ${boxShadow};
 -webkit-box-shadow: ${boxShadow};
 -moz-box-shadow: ${boxShadow};
 
-          `} language="css" heading='CSS' />
+          `
+              : `
+box-shadow: ${boxShadow};
+          `
+
+            } language="css" heading='CSS' />
 
           </div>
         </div>

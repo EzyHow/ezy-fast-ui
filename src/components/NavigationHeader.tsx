@@ -1,13 +1,34 @@
-import { useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import Dropdown from "./DropDown";
+import useClickOutside from "../hooks/useClickOutside";
+import { DropdownItem } from "../types";
+
+const dropdownItems: DropdownItem[] = [
+    {
+        label: "CSS Box Shadow Generator",
+        href: "/css-box-shadow-generator",
+        elementType: 'Link'
+    },
+    {
+        label: "CSS Gradient Generator",
+        href: "/css-gradient-generator",
+        elementType: 'Link'
+    },
+];
 
 export default function NavigationHeader() {
 
     const [isOpen, setIsOpen] = useState(false);
+    const menuRef = useRef<HTMLDivElement>(null);
+
+    const close = useCallback(() => setIsOpen(false), []);
+
+    useClickOutside(menuRef, close);
 
     return (
         <>
-            <nav className="shadow-lg bg-gray-800 fixed top-0 left-0 w-screen z-[1000]">
+            <nav ref={menuRef} className="shadow-lg bg-gray-800 fixed top-0 left-0 w-screen z-[1000]">
                 <div className="container px-6 py-4 mx-auto">
                     <div className="lg:flex lg:items-center">
                         <div className="flex items-center justify-between">
@@ -78,14 +99,9 @@ export default function NavigationHeader() {
                                     to="/list/snippets"
                                     className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-200"
                                 >Snippets</Link>
-                                <Link
-                                    to="/css-box-shadow-generator"
-                                    className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-200"
-                                >Box Shadow Generator</Link>
-                                <Link
-                                    to="/css-gradient-generator"
-                                    className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-200"
-                                >Gradient Generator</Link>
+
+                                <Dropdown menuLabel="Tools" items={dropdownItems} />
+
                                 <Link
                                     to="/about"
                                     className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-200"

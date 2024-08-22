@@ -18,3 +18,9 @@ export interface CodeSnippetData {
     hiddenStyle?: string;
     showReplayButton?: boolean;
 }
+
+export interface DropdownItem {
+    label: string;
+    href: string;
+    elementType?: 'a' | 'Link';
+}

@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import Dropdown from "./DropDown";
+import Dropdown from "./Dropdown";
 import useClickOutside from "../hooks/useClickOutside";
 import { DropdownItem } from "../types";
 

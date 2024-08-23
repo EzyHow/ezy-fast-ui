@@ -6,9 +6,10 @@ import { DropdownItem } from '../types';
 type DropdownProps = {
     menuLabel: string;
     items: DropdownItem[];
+    onClose?: () => void;
 };
 
-const Dropdown: React.FC<DropdownProps> = ({ menuLabel, items }) => {
+const Dropdown: React.FC<DropdownProps> = ({ menuLabel, items, onClose }) => {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -16,7 +17,12 @@ const Dropdown: React.FC<DropdownProps> = ({ menuLabel, items }) => {
         setIsOpen(!isOpen);
     };
 
-    const close = useCallback(() => setIsOpen(false), []);
+    const close = useCallback(() => {
+        setIsOpen(false)
+        if (onClose) {
+            onClose();
+        }
+    }, []);
 
     useClickOutside(dropdownRef, close);
 

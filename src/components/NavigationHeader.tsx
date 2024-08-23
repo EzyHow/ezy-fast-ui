@@ -92,27 +92,31 @@ export default function NavigationHeader() {
                                 className="flex flex-col  capitalize text-gray-300 lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center"
                             >
                                 <Link
+                                    onClick={close}
                                     to="/list/animations"
                                     className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-200"
                                 >Animations</Link>
                                 <Link
+                                    onClick={close}
                                     to="/list/snippets"
                                     className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-200"
                                 >Snippets</Link>
 
-                                <Dropdown menuLabel="Tools" items={dropdownItems} />
+                                <Dropdown menuLabel="Tools" items={dropdownItems} onClose={close} />
 
                                 <Link
+                                    onClick={close}
                                     to="/about"
                                     className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-200"
                                 >About</Link>
                             </div>
 
-                            <div className="flex justify-center mt-6 lg:flex lg:mt-0 lg:-mx-2">
+                            <div onClick={close} className="flex justify-center mt-6 lg:flex lg:mt-0 lg:-mx-2">
                                 <a
                                     href="https://twitter.com/ezyhow"
                                     className="mx-2 pt-1 transition-colors duration-300 transform text-gray-300 hover:text-gray-300"
                                     aria-label="Twitter"
+                                    target="_blank"
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Layer_1" viewBox="0 0 24 24" className="w-4 h-4 fill-current"><path d="M14.095479,10.316482L22.286354,1h-1.940718l-7.115352,8.087682L7.551414,1H1l8.589488,12.231093L1,23h1.940717  l7.509372-8.542861L16.448587,23H23L14.095479,10.316482z M11.436522,13.338465l-0.871624-1.218704l-6.924311-9.68815h2.981339  l5.58978,7.82155l0.867949,1.218704l7.26506,10.166271h-2.981339L11.436522,13.338465z" /></svg>
                                 </a>
@@ -121,6 +125,7 @@ export default function NavigationHeader() {
                                     href="https://www.facebook.com/EzyHow/"
                                     className="mx-2  transition-colors duration-300 transform text-gray-300 hover:text-gray-300"
                                     aria-label="Facebook"
+                                    target="_blank"
                                 >
                                     <svg
                                         className="w-5 h-5 fill-current"
@@ -138,6 +143,7 @@ export default function NavigationHeader() {
                                     href="https://github.com/EzyHow/ezy-fast-ui"
                                     className="mx-2 transition-colors duration-300 transform text-gray-300 hover:text-gray-300"
                                     aria-label="Github"
+                                    target="_blank"
                                 >
                                     <svg
                                         className="w-5 h-5 fill-current"

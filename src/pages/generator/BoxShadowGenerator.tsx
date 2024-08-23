@@ -40,10 +40,10 @@ const BoxShadowGenerator: React.FC = () => {
             </div>
 
             <div className="border border-gray-500 px-4 py-2 rounded-lg relative mb-8">
-              <label htmlFor="color" className="absolute -top-3 bg-gray-900 left-3 font-bold text-normal">Output Box Background Color:</label>
+              <label htmlFor="color" className="absolute -top-3 bg-gray-900 left-3 font-bold text-normal">Output BG Color:</label>
 
               <div className="flex justify-between pt-2">
-                <PopoverPicker color={outputBoxBackgroundColor} onChange={setOutputBoxBackgroundColor} css='w-24 md:w-24 lg:w-48 ' />
+                <PopoverPicker color={outputBoxBackgroundColor} onChange={setOutputBoxBackgroundColor} css='w-12 md:w-24 lg:w-48 ' />
                 <HexColorInput alpha prefixed color={outputBoxBackgroundColor} onChange={setOutputBoxBackgroundColor} className='border py-1 bg-gray-900 pl-4 uppercase rounded-md text-white w-32 ml-4' />
               </div>
 
@@ -59,7 +59,7 @@ const BoxShadowGenerator: React.FC = () => {
               <label htmlFor="color" className="absolute -top-3 bg-gray-900 left-3 font-bold text-normal">Color:</label>
 
               <div className="flex justify-between pt-2">
-                <PopoverPicker color={color} onChange={setColor} css='w-24 md:w-24 lg:w-48 ' />
+                <PopoverPicker color={color} onChange={setColor} css='w-12 md:w-24 lg:w-48 ' />
                 <HexColorInput alpha prefixed color={color} onChange={setColor} className='border py-1 bg-gray-900 pl-4 uppercase rounded-md text-white w-32 ml-4' />
               </div>
 
@@ -75,14 +75,14 @@ const BoxShadowGenerator: React.FC = () => {
                   min={0}
                   max={500}
                   onChange={(e) => setOffsetX(Number(e.target.value))}
-                  className="border p-1 mr-4 flex-1"
+                  className="border p-1 mr-4 w-full"
                 />
                 <input
                   id="offsetX"
                   type="number"
                   value={offsetX}
                   onChange={(e) => setOffsetX(Number(e.target.value))}
-                  className="border py-1 bg-gray-900 pl-4 rounded-md text-white w-20 text-center"
+                  className="border py-1 bg-gray-900 pl-4 rounded-md text-white w-12 md:w-20 text-center"
                 />
                 <p className='ml-2 text-xl'>px</p>
               </div>
@@ -97,7 +97,7 @@ const BoxShadowGenerator: React.FC = () => {
                   min={0}
                   max={100}
                   onChange={(e) => setOffsetY(Number(e.target.value))}
-                  className="border p-1 mr-4 flex-1"
+                  className="border p-1 mr-4 w-full"
                 />
                 <input
                   id="offsetY"
@@ -106,7 +106,7 @@ const BoxShadowGenerator: React.FC = () => {
                   min={0}
                   max={100}
                   onChange={(e) => setOffsetY(Number(e.target.value))}
-                  className="border py-1 bg-gray-900 pl-4 rounded-md text-white w-20 text-center"
+                  className="border py-1 bg-gray-900 pl-4 rounded-md text-white w-12 md:w-20 text-center"
                 />
                 <p className='ml-2 text-xl'>px</p>
               </div>
@@ -121,7 +121,7 @@ const BoxShadowGenerator: React.FC = () => {
                   min={0}
                   max={100}
                   onChange={(e) => setBlur(Number(e.target.value))}
-                  className="border p-1 mr-4 flex-1"
+                  className="border p-1 mr-4 w-full"
                 />
                 <input
                   id="blur"
@@ -130,7 +130,7 @@ const BoxShadowGenerator: React.FC = () => {
                   min={0}
                   max={100}
                   onChange={(e) => setBlur(Number(e.target.value))}
-                  className="border py-1 bg-gray-900 pl-4 rounded-md text-white w-20 text-center"
+                  className="border py-1 bg-gray-900 pl-4 rounded-md text-white w-12 md:w-20 text-center"
                 />
                 <p className='ml-2 text-xl'>px</p>
               </div>
@@ -145,7 +145,7 @@ const BoxShadowGenerator: React.FC = () => {
                   max={100}
                   value={spread}
                   onChange={(e) => setSpread(Number(e.target.value))}
-                  className="border p-1 mr-4 flex-1"
+                  className="border p-1 mr-4 w-full"
                 />
                 <input
                   id="spread"
@@ -154,7 +154,7 @@ const BoxShadowGenerator: React.FC = () => {
                   max={100}
                   value={spread}
                   onChange={(e) => setSpread(Number(e.target.value))}
-                  className="border py-1 bg-gray-900 pl-4 rounded-md text-white w-20 text-center"
+                  className="border py-1 bg-gray-900 pl-4 rounded-md text-white w-12 md:w-20 text-center"
                 />
                 <p className='ml-2 text-xl'>px</p>
               </div>

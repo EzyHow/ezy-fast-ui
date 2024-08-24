@@ -21,7 +21,8 @@ const BoxShadowGenerator: React.FC = () => {
   ]);
   const [selectedTab, setSelectedTab] = useState<number>(0);
   const [oldBrowserSupport, setOldBrowserSupport] = useState(false);
-  const [outputBoxBackgroundColor, setOutputBoxBackgroundColor] = useState<string>('#ffffffff');
+  const [outputOuterBoxBackgroundColor, setOutputOuterBoxBackgroundColor] = useState<string>('#ffffffff');
+  const [outputBoxBackgroundColor, setOutputBoxBackgroundColor] = useState<string>('#ffa0a0ff');
 
   const scrollContainerRef = React.useRef<HTMLDivElement>(null);
   const [showScrollButtons, setShowScrollButtons] = useState<boolean>(false);
@@ -117,10 +118,18 @@ const BoxShadowGenerator: React.FC = () => {
             </div>
 
             <div className="border border-gray-500 px-4 py-2 rounded-lg relative mb-8">
-              <label htmlFor="color" className="absolute -top-3 bg-gray-900 left-3 font-bold text-normal">Output BG Color:</label>
+              <label htmlFor="color" className="absolute -top-3 bg-gray-800 left-3 font-bold text-normal">Box Color:</label>
               <div className="flex justify-between pt-2">
                 <PopoverPicker color={outputBoxBackgroundColor} onChange={setOutputBoxBackgroundColor} css='w-12 md:w-24 lg:w-48 ' />
                 <HexColorInput alpha prefixed color={outputBoxBackgroundColor} onChange={setOutputBoxBackgroundColor} className='border py-1 bg-gray-900 pl-4 uppercase rounded-md text-white w-32 ml-4' />
+              </div>
+            </div>
+
+            <div className="border border-gray-500 px-4 py-2 rounded-lg relative mb-8">
+              <label htmlFor="color" className="absolute -top-3 bg-gray-800 left-3 font-bold text-normal">Output BG Color:</label>
+              <div className="flex justify-between pt-2">
+                <PopoverPicker color={outputOuterBoxBackgroundColor} onChange={setOutputOuterBoxBackgroundColor} css='w-12 md:w-24 lg:w-48 ' />
+                <HexColorInput alpha prefixed color={outputOuterBoxBackgroundColor} onChange={setOutputOuterBoxBackgroundColor} className='border py-1 bg-gray-900 pl-4 uppercase rounded-md text-white w-32 ml-4' />
               </div>
             </div>
 
@@ -331,16 +340,18 @@ const BoxShadowGenerator: React.FC = () => {
 
         <div>
           <h3 className="text-xl font-bold text-white text-center mb-2">Output</h3>
-          <div className="p-10 lg:p-28 rounded-lg" style={{ backgroundColor: outputBoxBackgroundColor }}>
-            <div className="rounded-2xl" style={{ boxShadow }}>
-              <CodeViewer code={oldBrowserSupport ? `
+          <div className="p-10 lg:p-28 rounded-lg" style={{ backgroundColor: outputOuterBoxBackgroundColor }}>
+            <div className="rounded-2xl w-full h-72 border border-gray-600" style={{ boxShadow, backgroundColor: outputBoxBackgroundColor }}></div>
+          </div>
+          <div className="mt-2">
+            <h4 className='text-xl font-bold text-white text-center mt-4'>CSS Code</h4>
+            <CodeViewer code={oldBrowserSupport ? `
 box-shadow: ${boxShadow};
 -webkit-box-shadow: ${boxShadow};
 -moz-box-shadow: ${boxShadow};
               ` : `
 box-shadow: ${boxShadow};
               `} language="css" heading='CSS' />
-            </div>
           </div>
         </div>
       </div>

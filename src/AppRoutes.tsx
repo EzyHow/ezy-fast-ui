@@ -22,7 +22,7 @@ function AppRoutes() {
         <Route path="/list/:type" element={<SnippetList />} />
         <Route path="/:type/:slug" element={<SnippetShow />} loader={({ params }) => {
           const { type } = params;
-          console.log('type => ', type);
+          // console.log('type => ', type);
           if (allowedTypes.includes(type as string)) {
             return null; // No special data needed, just pass through
           } else {

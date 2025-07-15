@@ -80,7 +80,7 @@ const GradientGenerator: React.FC = () => {
         <div className="pt-8">
             <Helmet>
                 <title>CSS Gradient Generator | Ezy Fast UI</title>
-                <link rel="canonical" href="https://fastui.ezyhow.com/#/css-gradient-generator" />
+                <link rel="canonical" href="https://fastui.ezyhow.com/css-gradient-generator" />
             </Helmet>
             <div className="p-6 mx-auto ">
                 <h1 className="text-3xl font-bold mb-8 text-center">CSS Gradient Generator</h1>

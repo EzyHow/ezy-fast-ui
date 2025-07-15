@@ -32,7 +32,7 @@ const SnippetShow = () => {
         <div className="pt-16">
             <Helmet>
                 <title>Output of {selected?.name ? selected?.name : ''} | Ezy Fast UI</title>
-                <link rel="canonical" href={`https://fastui.ezyhow.com/#/${type}/${slug}`} />
+                <link rel="canonical" href={`https://fastui.ezyhow.com/${type}/${slug}`} />
             </Helmet>
             <div className="grid grid-cols-1">
                 <div className="col-span-1 w-full pl-5 pr-5 pb-10">

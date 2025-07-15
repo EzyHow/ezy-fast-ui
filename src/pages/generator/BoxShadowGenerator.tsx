@@ -98,7 +98,7 @@ const BoxShadowGenerator: React.FC = () => {
     <div className="pt-16">
       <Helmet>
         <title>CSS Box Shadow Generator | Ezy Fast UI</title>
-        <link rel="canonical" href="https://fastui.ezyhow.com/#/css-box-shadow-generator" />
+        <link rel="canonical" href="https://fastui.ezyhow.com/css-box-shadow-generator" />
       </Helmet>
       <div className="w-full">
         <h1 className="text-4xl font-bold text-center">Box Shadow Generator</h1>

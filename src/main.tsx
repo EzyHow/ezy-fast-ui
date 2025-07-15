@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import {
-  HashRouter,
+  BrowserRouter,
 } from "react-router-dom";
 import NavigationHeader from './components/NavigationHeader.tsx';
 import AppRoutes from './AppRoutes.tsx';
@@ -16,14 +16,14 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <HelmetProvider>
       <div className="w-full h-screen overflow-auto bg-slate-700 text-white">
-        <HashRouter>
+        <BrowserRouter>
           <NavigationHeader />
           <div className="max-w-7xl mx-auto min-h-[calc(100vh-120px)]">
             <AppRoutes />
           </div>
           <CookiesNotice />
           <Footer />
-        </HashRouter>
+        </BrowserRouter>
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-dark.min.css"

@@ -49,7 +49,7 @@ const SnippetList: React.FC = () => {
         <section>
             <Helmet>
                 <title>List of Free {type == 'animations' ? 'Animations' : 'Snippets'} | Ezy Fast UI</title>
-                <link rel="canonical" href={`https://fastui.ezyhow.com/#/list/${type}`} />
+                <link rel="canonical" href={`https://fastui.ezyhow.com/list/${type}`} />
             </Helmet>
             <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
                 <header>

@@ -7,15 +7,15 @@ import fs from 'fs';
 
 
 const snippets = [
-    {
-        name: "Spring Button",
-        hint: 'Click on button!',
-        slug: 'spring-button',
-        category: 'Button',
-        tags: [
-            'Round'
-        ],
-        css: `
+  {
+    name: "Spring Button",
+    hint: 'Click on button!',
+    slug: 'spring-button',
+    category: 'Button',
+    tags: [
+      'Round'
+    ],
+    css: `
         .ezy-spring-button {
           /* Variables */
          --button_radius: 0.75em;
@@ -51,26 +51,26 @@ const snippets = [
         }
   
                 `
-        ,
-        html: `
+    ,
+    html: `
         <button class="ezy-spring-button">
         <span class="button_top"> Button
         </span>
       </button>
                 `
-        ,
-        hiddenStyle: ''
-    },
-    {
-        name: "Outline Button",
-        hint: 'Click on button!',
-        slug: 'outline-button-1',
-        category: 'Button',
-        tags: [
-            'Outline',
-            'Glow'
-        ],
-        css: `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Outline Button",
+    hint: 'Click on button!',
+    slug: 'outline-button-1',
+    category: 'Button',
+    tags: [
+      'Outline',
+      'Glow'
+    ],
+    css: `
         .ezy-outline-button-1 {
           background-color: transparent;
           border: 2px solid #ec4899;
@@ -97,26 +97,26 @@ const snippets = [
         
   
                 `
-        ,
-        html: `
+    ,
+    html: `
         <button class="ezy-outline-button-1">
          Button
       </button>
                 `
-        ,
-        hiddenStyle: ''
-    },
-    {
-        name: "Outline Round Button",
-        hint: 'Click on button!',
-        slug: 'outline-round-button-1',
-        category: 'Button',
-        tags: [
-            'Outline',
-            'Glow',
-            'Round'
-        ],
-        css: `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Outline Round Button",
+    hint: 'Click on button!',
+    slug: 'outline-round-button-1',
+    category: 'Button',
+    tags: [
+      'Outline',
+      'Glow',
+      'Round'
+    ],
+    css: `
         .ezy-outline-round-button-1 {
           background-color: transparent;
           border: 2px solid #ec4899;
@@ -143,25 +143,25 @@ const snippets = [
         
   
                 `
-        ,
-        html: `
+    ,
+    html: `
         <button class="ezy-outline-round-button-1">
          Button
       </button>
                 `
-        ,
-        hiddenStyle: ''
-    },
-    {
-        name: "Outline Checkbox",
-        hint: 'Click on checkbox!',
-        slug: 'outline-checkbox-1',
-        category: 'Checkbox',
-        tags: [
-            'Outline',
-            'Round'
-        ],
-        css: `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Outline Checkbox",
+    hint: 'Click on checkbox!',
+    slug: 'outline-checkbox-1',
+    category: 'Checkbox',
+    tags: [
+      'Outline',
+      'Round'
+    ],
+    css: `
         .ezy-outline-checkbox-1 {
           appearance: none;
           width: 30px;
@@ -178,22 +178,22 @@ const snippets = [
           background-repeat: no-repeat;
         }
                 `
-        ,
-        html: `
+    ,
+    html: `
         <input type="checkbox" class="ezy-outline-checkbox-1"/>
                 `
-        ,
-        hiddenStyle: ''
-    },
-    {
-        name: "Checkbox",
-        hint: 'Click on Checkbox!',
-        slug: 'checkbox-123',
-        category: 'Checkbox',
-        tags: [
-            'Round'
-        ],
-        css: `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Checkbox",
+    hint: 'Click on Checkbox!',
+    slug: 'checkbox-123',
+    category: 'Checkbox',
+    tags: [
+      'Round'
+    ],
+    css: `
         .clear {
           clear: both;
         }
@@ -237,8 +237,8 @@ const snippets = [
         }
   
                 `
-        ,
-        html: `
+    ,
+    html: `
         <div class="content">
     <label class="ezy-checkbox-123">
       <input id="ch1" type="checkbox">
@@ -246,19 +246,19 @@ const snippets = [
     </label>
   </div>
                 `
-        ,
-        hiddenStyle: ''
-    },
-    {
-        name: "Pulse Loader",
-        hint: '',
-        slug: 'pulse-loader-1',
-        category: 'Loader',
-        tags: [
-            'Pulse',
-            'Loader'
-        ],
-        css: `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Pulse Loader",
+    hint: '',
+    slug: 'pulse-loader-1',
+    category: 'Loader',
+    tags: [
+      'Pulse',
+      'Loader'
+    ],
+    css: `
           .ezy-pulse-loader {
               display: flex;
               justify-content: space-around;
@@ -293,27 +293,27 @@ const snippets = [
               }
           }
               `
-        ,
-        html: `
+    ,
+    html: `
       <div class="ezy-pulse-loader">
           <div></div>
           <div></div>
           <div></div>
       </div>
               `
-        ,
-        hiddenStyle: ''
-    },
-    {
-        name: "Rotating Square Loader",
-        hint: '',
-        slug: 'rotating-square-loader-1',
-        category: 'Loader',
-        tags: [
-            'Rotating',
-            'Loader'
-        ],
-        css: `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Rotating Square Loader",
+    hint: '',
+    slug: 'rotating-square-loader-1',
+    category: 'Loader',
+    tags: [
+      'Rotating',
+      'Loader'
+    ],
+    css: `
           .ezy-rotating-square-loader {
               display: flex;
               justify-content: center;
@@ -338,26 +338,26 @@ const snippets = [
               }
           }
               `
-        ,
-        html: `
+    ,
+    html: `
       <div class="ezy-rotating-square-loader">
           <div></div>
           <div></div>
       </div>
               `
-        ,
-        hiddenStyle: ''
-    },
-    {
-        name: "Bouncing Balls Loader",
-        hint: '',
-        slug: 'bouncing-balls-loader-1',
-        category: 'Loader',
-        tags: [
-            'Bouncing',
-            'Loader'
-        ],
-        css: `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Bouncing Balls Loader",
+    hint: '',
+    slug: 'bouncing-balls-loader-1',
+    category: 'Loader',
+    tags: [
+      'Bouncing',
+      'Loader'
+    ],
+    css: `
           .ezy-bouncing-ball-loader {
               display: flex;
               justify-content: space-around;
@@ -386,27 +386,27 @@ const snippets = [
               }
           }
               `
-        ,
-        html: `
+    ,
+    html: `
       <div class="ezy-bouncing-ball-loader">
           <div></div>
           <div></div>
           <div></div>
       </div>
               `
-        ,
-        hiddenStyle: ''
-    },
-    {
-        name: "Spinning Dots Loader",
-        hint: '',
-        slug: 'spinning-dots-loader-1',
-        category: 'Loader',
-        tags: [
-            'Spinning',
-            'Loader'
-        ],
-        css: `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Spinning Dots Loader",
+    hint: '',
+    slug: 'spinning-dots-loader-1',
+    category: 'Loader',
+    tags: [
+      'Spinning',
+      'Loader'
+    ],
+    css: `
           .ezy-spinning-dots-loader {
               display: flex;
               justify-content: center;
@@ -442,27 +442,27 @@ const snippets = [
               }
           }
               `
-        ,
-        html: `
+    ,
+    html: `
       <div class="ezy-spinning-dots-loader">
           <div></div>
           <div></div>
           <div></div>
       </div>
               `
-        ,
-        hiddenStyle: ''
-    },
-    {
-        name: "Fading Bars Loader",
-        hint: '',
-        slug: 'fading-bars-loader-1',
-        category: 'Loader',
-        tags: [
-            'Fade',
-            'Loader'
-        ],
-        css: `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Fading Bars Loader",
+    hint: '',
+    slug: 'fading-bars-loader-1',
+    category: 'Loader',
+    tags: [
+      'Fade',
+      'Loader'
+    ],
+    css: `
           .ezy-fading-bar-loader {
               display: flex;
               justify-content: center;
@@ -503,8 +503,8 @@ const snippets = [
               }
           }
               `
-        ,
-        html: `
+    ,
+    html: `
       <div class="ezy-fading-bar-loader">
           <div></div>
           <div></div>
@@ -512,20 +512,20 @@ const snippets = [
           <div></div>
       </div>
               `
-        ,
-        hiddenStyle: ''
-    },
-    {
-        name: "Button With Fading Bars Loader",
-        hint: '',
-        slug: 'ezy-button-with-loader-1',
-        category: 'Button',
-        tags: [
-            'Fade',
-            'Loader',
-            'Button'
-        ],
-        css: `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Button With Fading Bars Loader",
+    hint: '',
+    slug: 'ezy-button-with-loader-1',
+    category: 'Button',
+    tags: [
+      'Fade',
+      'Loader',
+      'Button'
+    ],
+    css: `
           .ezy-button-with-loader {
               position: relative;
               text-align: center;
@@ -608,8 +608,8 @@ const snippets = [
               }
           }
               `
-        ,
-        html: `
+    ,
+    html: `
       <div class="ezy-button-with-loader">
           <button>Submit</button>
           <div class="ezy-fading-bar-loader">
@@ -620,8 +620,8 @@ const snippets = [
           </div>
       </div>
               `
-        ,
-        js: `
+    ,
+    js: `
           
           const button = document.querySelector('.ezy-button-with-loader button');
           const loader = document.querySelector('.ezy-button-with-loader .ezy-fading-bar-loader');
@@ -638,18 +638,18 @@ const snippets = [
               });
           }
       `,
-        hiddenStyle: ''
-    },
-    {
-        name: "Round Avatar",
-        hint: '',
-        slug: 'ezy-avatar-1',
-        category: 'Avatar',
-        tags: [
-            'Round',
-            'Avatar',
-        ],
-        css: `
+    hiddenStyle: ''
+  },
+  {
+    name: "Round Avatar",
+    hint: '',
+    slug: 'ezy-avatar-1',
+    category: 'Avatar',
+    tags: [
+      'Round',
+      'Avatar',
+    ],
+    css: `
           .ezy-avatar {
               width: 120px;
               height: 120px;
@@ -658,27 +658,27 @@ const snippets = [
               box-shadow: 0 0 0 4px #ec4899, 0 0 0 8px #000;
           }
               `
-        ,
-        html: `
+    ,
+    html: `
       <div>
           <img class="ezy-avatar"
           src="https://plus.unsplash.com/premium_vector-1714618927767-b7606cc6c88c?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Avatar" width="200" height="200"/>
       </div>
               `
-        ,
-        hiddenStyle: ''
-    },
-    {
-        name: "Square Avatar",
-        hint: '',
-        slug: 'ezy-avatar-square-1',
-        category: 'Avatar',
-        tags: [
-            'Square',
-            'Avatar',
-        ],
-        css: `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Square Avatar",
+    hint: '',
+    slug: 'ezy-avatar-square-1',
+    category: 'Avatar',
+    tags: [
+      'Square',
+      'Avatar',
+    ],
+    css: `
           .ezy-avatar-square {
               width: 120px;
               height: 120px;
@@ -687,27 +687,27 @@ const snippets = [
               box-shadow: 0 0 0 4px #ec4899, 0 0 0 8px #000;
           }
               `
-        ,
-        html: `
+    ,
+    html: `
       <div>
           <img class="ezy-avatar-square"
           src="https://plus.unsplash.com/premium_vector-1714618927767-b7606cc6c88c?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Avatar" width="200" height="200"/>
       </div>
               `
-        ,
-        hiddenStyle: ''
-    },
-    {
-        name: "Round Avatar with Shadow",
-        hint: '',
-        slug: 'ezy-avatar-2',
-        category: 'Avatar',
-        tags: [
-            'Round',
-            'Avatar',
-        ],
-        css: `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Round Avatar with Shadow",
+    hint: '',
+    slug: 'ezy-avatar-2',
+    category: 'Avatar',
+    tags: [
+      'Round',
+      'Avatar',
+    ],
+    css: `
           .ezy-avatar-with-shadow {
               width: 120px;
               height: 120px;
@@ -716,27 +716,27 @@ const snippets = [
               box-shadow: 0px 0px 16px 5px #ec4899;
           }
               `
-        ,
-        html: `
+    ,
+    html: `
       <div>
           <img class="ezy-avatar-with-shadow"
           src="https://plus.unsplash.com/premium_vector-1714618927767-b7606cc6c88c?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Avatar" width="200" height="200"/>
       </div>
               `
-        ,
-        hiddenStyle: ''
-    },
-    {
-        name: "Square Avatar with Shadow",
-        hint: '',
-        slug: 'ezy-avatar-3',
-        category: 'Avatar',
-        tags: [
-            'Square',
-            'Avatar',
-        ],
-        css: `
+    ,
+    hiddenStyle: ''
+  },
+  {
+    name: "Square Avatar with Shadow",
+    hint: '',
+    slug: 'ezy-avatar-3',
+    category: 'Avatar',
+    tags: [
+      'Square',
+      'Avatar',
+    ],
+    css: `
           .ezy-square-avatar-with-shadow {
               width: 120px;
               height: 120px;
@@ -745,29 +745,29 @@ const snippets = [
               box-shadow: 0px 0px 16px 5px #ec4899;
           }
               `
-        ,
-        html: `
+    ,
+    html: `
       <div>
           <img class="ezy-square-avatar-with-shadow"
           src="https://plus.unsplash.com/premium_vector-1714618927767-b7606cc6c88c?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Avatar" width="200" height="200"/>
       </div>
               `
-        ,
-        hiddenStyle: ''
-    },
+    ,
+    hiddenStyle: ''
+  },
 ];
 
 const animations = [
-    {
-        name: "Rotate 180",
-        hint: 'Hover over the box!',
-        slug: 'rotate-180-on-hover',
-        category: 'Hover',
-        tags: [
-            'Rotate', 'Hover'
-        ],
-        css: `
+  {
+    name: "Rotate 180",
+    hint: 'Hover over the box!',
+    slug: 'rotate-180-on-hover',
+    category: 'Hover',
+    tags: [
+      'Rotate', 'Hover'
+    ],
+    css: `
             .ezy-rotate-180 {
                 transition: all 0.5s;
             }
@@ -786,20 +786,20 @@ const animations = [
               cursor: pointer;
             }
             `,
-        html: `
+    html: `
             <div class="box ezy-rotate-180"></div>
             `,
-        hiddenStyle: ''
-    },
-    {
-        name: "TransLeft",
-        hint: 'Hover over the box!',
-        slug: 'trans-left-on-hover',
-        category: 'Hover',
-        tags: [
-            'Translate', 'Hover', 'Left'
-        ],
-        css: `
+    hiddenStyle: ''
+  },
+  {
+    name: "TransLeft",
+    hint: 'Hover over the box!',
+    slug: 'trans-left-on-hover',
+    category: 'Hover',
+    tags: [
+      'Translate', 'Hover', 'Left'
+    ],
+    css: `
             .ezy-transLeft {
                 transition: .5s, color .10s;
                     -webkit-transition: .5s, color .10s;
@@ -821,20 +821,20 @@ const animations = [
               cursor: pointer;
             }
             `,
-        html: `
+    html: `
             <div class="box ezy-transLeft"></div>
             `,
-        hiddenStyle: ''
-    },
-    {
-        name: "Bounce",
-        hint: 'Hover over the box!',
-        slug: 'bounce-on-hover',
-        category: 'Hover',
-        tags: [
-            'Bounce', 'Hover'
-        ],
-        css: `
+    hiddenStyle: ''
+  },
+  {
+    name: "Bounce",
+    hint: 'Hover over the box!',
+    slug: 'bounce-on-hover',
+    category: 'Hover',
+    tags: [
+      'Bounce', 'Hover'
+    ],
+    css: `
           @keyframes ezy-bounce {
               from,
               20%,
@@ -883,21 +883,21 @@ const animations = [
             cursor: pointer;
           }
     `,
-        html: `
+    html: `
             <div class="box ezy-bounce"></div>
             `,
-        hiddenStyle: ''
-    },
-    {
-        name: "Bounce In",
-        hint: 'It works on entry!',
-        slug: 'entry-bounce-in',
-        category: 'Entry',
-        showReplayButton: true,
-        tags: [
-            'Bounce', 'Hover'
-        ],
-        css: `
+    hiddenStyle: ''
+  },
+  {
+    name: "Bounce In",
+    hint: 'It works on entry!',
+    slug: 'entry-bounce-in',
+    category: 'Entry',
+    showReplayButton: true,
+    tags: [
+      'Bounce', 'Hover'
+    ],
+    css: `
           @keyframes ezy-bounceIn {
               from,
               20%,
@@ -953,21 +953,21 @@ const animations = [
               cursor: pointer;
             }
             `,
-        html: `
+    html: `
             <div class="box ezy-bounceIn"></div>
             `,
-        hiddenStyle: ''
-    },
-    {
-        name: "Bounce In Down",
-        hint: 'It works on entry!',
-        slug: 'entry-bounce-in-down',
-        tags: [
-            'Bounce', 'Hover'
-        ],
-        category: 'Entry',
-        showReplayButton: true,
-        css: `
+    hiddenStyle: ''
+  },
+  {
+    name: "Bounce In Down",
+    hint: 'It works on entry!',
+    slug: 'entry-bounce-in-down',
+    tags: [
+      'Bounce', 'Hover'
+    ],
+    category: 'Entry',
+    showReplayButton: true,
+    css: `
             @keyframes ezy-bounceInDown {
                 from,
                 60%,
@@ -1016,21 +1016,21 @@ const animations = [
               cursor: pointer;
             }
     `,
-        html: `
+    html: `
             <div class="box ezy-bounceInDown"></div>
             `,
-        hiddenStyle: ''
-    },
-    {
-        name: "Bounce In Left",
-        hint: 'It works on entry!',
-        slug: 'entry-bounce-in-left',
-        category: 'Entry',
-        showReplayButton: true,
-        tags: [
-            'Bounce', 'Entry'
-        ],
-        css: `
+    hiddenStyle: ''
+  },
+  {
+    name: "Bounce In Left",
+    hint: 'It works on entry!',
+    slug: 'entry-bounce-in-left',
+    category: 'Entry',
+    showReplayButton: true,
+    tags: [
+      'Bounce', 'Entry'
+    ],
+    css: `
             @keyframes ezy-bounceInLeft {
                 from,
                 60%,
@@ -1080,21 +1080,21 @@ const animations = [
               cursor: pointer;
             }
             `,
-        html: `
+    html: `
             <div class="box ezy-bounceInLeft"></div>
             `,
-        hiddenStyle: ''
-    },
-    {
-        name: "Bounce In Right",
-        hint: 'It works on entry!',
-        slug: 'entry-bounce-in-right',
-        category: 'Entry',
-        showReplayButton: true,
-        tags: [
-            'Bounce', 'Entry'
-        ],
-        css: `
+    hiddenStyle: ''
+  },
+  {
+    name: "Bounce In Right",
+    hint: 'It works on entry!',
+    slug: 'entry-bounce-in-right',
+    category: 'Entry',
+    showReplayButton: true,
+    tags: [
+      'Bounce', 'Entry'
+    ],
+    css: `
           @keyframes ezy-bounceInRight {
               from,
               60%,
@@ -1145,21 +1145,21 @@ const animations = [
           }
   
             `,
-        html: `
+    html: `
             <div class="box ezy-bounceInRight"></div>
             `,
-        hiddenStyle: ''
-    },
-    {
-        name: "Bounce In Up",
-        hint: 'It works on entry!',
-        slug: 'entry-bounce-in-up',
-        showReplayButton: true,
-        tags: [
-            'Bounce', 'Entry'
-        ],
-        category: 'Entry',
-        css: `
+    hiddenStyle: ''
+  },
+  {
+    name: "Bounce In Up",
+    hint: 'It works on entry!',
+    slug: 'entry-bounce-in-up',
+    showReplayButton: true,
+    tags: [
+      'Bounce', 'Entry'
+    ],
+    category: 'Entry',
+    css: `
           @keyframes ezy-bounceInUp {
               from,
               60%,
@@ -1209,22 +1209,22 @@ const animations = [
             cursor: pointer;
           }
             `,
-        html: `
+    html: `
             <div class="box ezy-bounceInUp"></div>
             `,
-        hiddenStyle: ''
-    },
+    hiddenStyle: ''
+  },
 
-    {
-        name: "Scale Out",
-        hint: 'It works on entry!',
-        slug: 'entry-scale-out',
-        showReplayButton: true,
-        tags: [
-            'Scale', 'Entry'
-        ],
-        category: 'Entry',
-        css: `
+  {
+    name: "Scale Out",
+    hint: 'It works on entry!',
+    slug: 'entry-scale-out',
+    showReplayButton: true,
+    tags: [
+      'Scale', 'Entry'
+    ],
+    category: 'Entry',
+    css: `
             @keyframes ezy-scaleOut {
                 from {
                   transform: scale3d(1, 1, 1);
@@ -1258,21 +1258,21 @@ const animations = [
             }
   
             `,
-        html: `
+    html: `
             <div class="box ezy-scaleOut"></div>
             `,
-        hiddenStyle: ''
-    },
-    {
-        name: "Scale In",
-        hint: 'It works on entry!',
-        slug: 'entry-scale-in',
-        category: 'Entry',
-        showReplayButton: true,
-        tags: [
-            'Scale', 'Entry'
-        ],
-        css: `
+    hiddenStyle: ''
+  },
+  {
+    name: "Scale In",
+    hint: 'It works on entry!',
+    slug: 'entry-scale-in',
+    category: 'Entry',
+    showReplayButton: true,
+    tags: [
+      'Scale', 'Entry'
+    ],
+    css: `
           @keyframes ezy-scaleIn {
               from {
                 transform: scale3d(1, 1, 1);
@@ -1303,22 +1303,22 @@ const animations = [
               cursor: pointer;
             }
       `,
-        html: `
+    html: `
             <div class="box ezy-scaleIn"></div>
             `,
-        hiddenStyle: ''
+    hiddenStyle: ''
 
-    },
-    {
-        name: "Gradient Border Animation",
-        hint: 'You can increase/decrease the speed of the animation in CSS.',
-        slug: 'gradient-border-animation-1',
-        category: 'Infinite',
-        showReplayButton: true,
-        tags: [
-            'Border', 'Infinite', 'Gradient'
-        ],
-        css: `
+  },
+  {
+    name: "Gradient Border Animation",
+    hint: 'You can increase/decrease the speed of the animation in CSS.',
+    slug: 'gradient-border-animation-1',
+    category: 'Infinite',
+    showReplayButton: true,
+    tags: [
+      'Border', 'Infinite', 'Gradient'
+    ],
+    css: `
           @keyframes ezy-rotate {
             from {
               transform: rotate(0);
@@ -1364,25 +1364,25 @@ const animations = [
             z-index: 0;
           }
       `,
-        html: `
+    html: `
             <div class="outer">
               <div class="box">
               </div>
             </div>
             `,
-        hiddenStyle: ''
+    hiddenStyle: ''
 
-    },
-    {
-        name: "Border Animation",
-        hint: 'You can increase/decrease the speed of the animation in CSS.',
-        slug: 'border-animation-2',
-        category: 'Infinite',
-        showReplayButton: true,
-        tags: [
-            'Border', 'Infinite',
-        ],
-        css: `
+  },
+  {
+    name: "Border Animation",
+    hint: 'You can increase/decrease the speed of the animation in CSS.',
+    slug: 'border-animation-2',
+    category: 'Infinite',
+    showReplayButton: true,
+    tags: [
+      'Border', 'Infinite',
+    ],
+    css: `
           @keyframes ezy-rotate {
             from {
               transform: rotate(0);
@@ -1428,25 +1428,25 @@ const animations = [
             z-index: 0;
           }
       `,
-        html: `
+    html: `
             <div class="outer">
               <div class="box">
               </div>
             </div>
             `,
-        hiddenStyle: ''
+    hiddenStyle: ''
 
-    },
-    {
-        name: "Line Border Animation",
-        hint: 'You can increase/decrease the speed of the animation in CSS.',
-        slug: 'line-border-animation-1',
-        category: 'Infinite',
-        showReplayButton: true,
-        tags: [
-            'Border', 'Infinite',
-        ],
-        css: `
+  },
+  {
+    name: "Line Border Animation",
+    hint: 'You can increase/decrease the speed of the animation in CSS.',
+    slug: 'line-border-animation-1',
+    category: 'Infinite',
+    showReplayButton: true,
+    tags: [
+      'Border', 'Infinite',
+    ],
+    css: `
           @keyframes ezy-animation {
             from {
               stroke-dashoffset: 0;
@@ -1481,7 +1481,7 @@ const animations = [
             animation: ezy-animation 5s linear infinite;
           }
       `,
-        html: `
+    html: `
             <div class="outer">
               <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
                 <rect
@@ -1497,19 +1497,19 @@ const animations = [
               </div>
             </div>
             `,
-        hiddenStyle: ''
+    hiddenStyle: ''
 
-    },
-    {
-        name: "Line Border Animation 2",
-        hint: 'You can increase/decrease the speed of the animation in CSS.',
-        slug: 'line-border-animation-2',
-        category: 'Infinite',
-        showReplayButton: true,
-        tags: [
-            'Border', 'Infinite',
-        ],
-        css: `
+  },
+  {
+    name: "Line Border Animation 2",
+    hint: 'You can increase/decrease the speed of the animation in CSS.',
+    slug: 'line-border-animation-2',
+    category: 'Infinite',
+    showReplayButton: true,
+    tags: [
+      'Border', 'Infinite',
+    ],
+    css: `
           @keyframes ezy-animation {
             from {
               stroke-dashoffset: 0;
@@ -1544,7 +1544,7 @@ const animations = [
             animation: ezy-animation 5s linear infinite;
           }
       `,
-        html: `
+    html: `
             <div class="outer">
               <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
                 <rect
@@ -1560,33 +1560,33 @@ const animations = [
               </div>
             </div>
             `,
-        hiddenStyle: ''
+    hiddenStyle: ''
 
-    }
+  }
 ];
 
 function formatDateToISO(date) {
-    // Get the components of the date
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based
-    const day = String(date.getDate()).padStart(2, '0');
-    const hours = String(date.getHours()).padStart(2, '0');
-    const minutes = String(date.getMinutes()).padStart(2, '0');
-    const seconds = String(date.getSeconds()).padStart(2, '0');
+  // Get the components of the date
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+  const day = String(date.getDate()).padStart(2, '0');
+  const hours = String(date.getHours()).padStart(2, '0');
+  const minutes = String(date.getMinutes()).padStart(2, '0');
+  const seconds = String(date.getSeconds()).padStart(2, '0');
 
-    // Get the timezone offset in minutes and format it
-    const timezoneOffset = -date.getTimezoneOffset(); // offset in minutes
-    const offsetHours = String(Math.floor(timezoneOffset / 60)).padStart(2, '0');
-    const offsetMinutes = String(timezoneOffset % 60).padStart(2, '0');
-    const offsetSign = timezoneOffset >= 0 ? '+' : '-';
+  // Get the timezone offset in minutes and format it
+  const timezoneOffset = -date.getTimezoneOffset(); // offset in minutes
+  const offsetHours = String(Math.floor(timezoneOffset / 60)).padStart(2, '0');
+  const offsetMinutes = String(timezoneOffset % 60).padStart(2, '0');
+  const offsetSign = timezoneOffset >= 0 ? '+' : '-';
 
-    // Construct the ISO 8601 string
-    return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}${offsetSign}${offsetHours}:${offsetMinutes}`;
+  // Construct the ISO 8601 string
+  return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}${offsetSign}${offsetHours}:${offsetMinutes}`;
 }
 
 function sitemapGenerator() {
-    let currentDate = new Date();
-    let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  let currentDate = new Date();
+  let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 	<loc>https://fastui.ezyhow.com/</loc>
@@ -1594,62 +1594,62 @@ function sitemapGenerator() {
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://fastui.ezyhow.com/#/list</loc>
+	<loc>https://fastui.ezyhow.com/list</loc>
 	<lastmod>${formatDateToISO(currentDate)}</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://fastui.ezyhow.com/#/list/animations</loc>
+	<loc>https://fastui.ezyhow.com/list/animations</loc>
 	<lastmod>${formatDateToISO(currentDate)}</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://fastui.ezyhow.com/#/list/snippets</loc>
+	<loc>https://fastui.ezyhow.com/list/snippets</loc>
 	<lastmod>${formatDateToISO(currentDate)}</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://fastui.ezyhow.com/#/css-box-shadow-generator</loc>
+	<loc>https://fastui.ezyhow.com/css-box-shadow-generator</loc>
 	<lastmod>${formatDateToISO(currentDate)}</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://fastui.ezyhow.com/#/css-gradient-generator</loc>
+	<loc>https://fastui.ezyhow.com/css-gradient-generator</loc>
 	<lastmod>${formatDateToISO(currentDate)}</lastmod>
 	<priority>0.8</priority>
 </url>`;
 
-    snippets.forEach((snippet) => {
-        sitemap += `
+  snippets.forEach((snippet) => {
+    sitemap += `
         <url>
-            <loc>https://fastui.ezyhow.com/#/snippets/${snippet.slug}</loc>
+            <loc>https://fastui.ezyhow.com/snippets/${snippet.slug}</loc>
             <lastmod>${formatDateToISO(currentDate)}</lastmod>
             <priority>0.8</priority>
         </url>`;
-    });
+  });
 
-    animations.forEach((animation) => {
-        sitemap += `
+  animations.forEach((animation) => {
+    sitemap += `
         <url>
-            <loc>https://fastui.ezyhow.com/#/animations/${animation.slug}</loc>
+            <loc>https://fastui.ezyhow.com/animations/${animation.slug}</loc>
             <lastmod>${formatDateToISO(currentDate)}</lastmod>
             <priority>0.8</priority>
         </url>`;
-    });
+  });
 
 
-    sitemap += `</urlset>`;
-    return sitemap;
+  sitemap += `</urlset>`;
+  return sitemap;
 }
 
 const args = process.argv.slice(2);
 const parsedArgs = {};
 
 args.forEach(arg => {
-    const [key, value] = arg.split('=');
-    if (key && value) {
-        parsedArgs[key] = value;
-    }
+  const [key, value] = arg.split('=');
+  if (key && value) {
+    parsedArgs[key] = value;
+  }
 });
 
 
@@ -1657,19 +1657,19 @@ args.forEach(arg => {
 let filename = './dev-tools/sitemap.xml';
 // check if filename is passed
 if (parsedArgs['filename'] && parsedArgs['filename'].length > 0) {
-    filename = parsedArgs['filename'];
+  filename = parsedArgs['filename'];
 }
 
 console.log(filename);
 
 // check if file exists
 if (!fs.existsSync(filename)) {
-    fs.writeFileSync(filename, sitemapGenerator());
+  fs.writeFileSync(filename, sitemapGenerator());
 } else {
-    // check if force flag is passed
-    if (process.argv.includes('--force')) {
-        fs.writeFileSync(filename, sitemapGenerator());
-    } else {
-        console.log(filename + ' already exists. Use --force flag to overwrite it.');
-    }
+  // check if force flag is passed
+  if (process.argv.includes('--force')) {
+    fs.writeFileSync(filename, sitemapGenerator());
+  } else {
+    console.log(filename + ' already exists. Use --force flag to overwrite it.');
+  }
 }

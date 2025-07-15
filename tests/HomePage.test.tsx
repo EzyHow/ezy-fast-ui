@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest';
 
-import { HashRouter, MemoryRouter } from 'react-router-dom';
+import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import React from 'react';
 import HomePage from '../src/pages/homepage/HomePage';

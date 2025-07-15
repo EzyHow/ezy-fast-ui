@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest';
 
-import { HashRouter, MemoryRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, MemoryRouter, Route, Routes } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import React from 'react';
 import SnippetList from '../src/pages/snippets/SnippetList';
@@ -24,9 +24,9 @@ describe('Renders list page correctly', async () => {
     it('Should render the page correctly', async () => {
         // Setup
         const { container } = render(<HelmetProvider>
-            <HashRouter>
+            <BrowserRouter>
                 <SnippetList />
-            </HashRouter>
+            </BrowserRouter>
         </HelmetProvider>);
 
         const iframes = container.querySelectorAll('iframe');

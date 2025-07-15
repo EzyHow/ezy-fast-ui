@@ -5,7 +5,7 @@ export default function About() {
         <section className="">
             <Helmet>
                 <title>About Ezy Fast UI</title>
-                <link rel="canonical" href={`https://fastui.ezyhow.com/#/about`} />
+                <link rel="canonical" href={`https://fastui.ezyhow.com/about`} />
             </Helmet>
             <div className="p-8 md:p-12 lg:px-16 lg:py-24">
                 <div className="mx-auto max-w-lg text-center">

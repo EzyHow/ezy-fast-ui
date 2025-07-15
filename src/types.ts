@@ -24,3 +24,8 @@ export interface DropdownItem {
     href: string;
     elementType?: 'a' | 'Link';
 }
+
+export type Palette = {
+    name: string;
+    colors: string[];
+};

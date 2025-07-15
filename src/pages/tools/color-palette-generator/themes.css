@@ -1,0 +1,18 @@
+:root {
+    --bg: #ffffff;
+    --text: #111111;
+    --card-bg: #f3f3f3;
+}
+
+[data-theme='dark'] {
+    --bg: #121212;
+    --text: #e0e0e0;
+    --card-bg: #1f1f1f;
+}
+
+body,
+.palette-container {
+    /* background-color: var(--bg);
+    color: var(--text); */
+    transition: background-color 0.3s, color 0.3s;
+}

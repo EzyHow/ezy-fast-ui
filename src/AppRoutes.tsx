@@ -10,6 +10,7 @@ import HomePage from './pages/homepage/HomePage'
 import BoxShadowGenerator from './pages/generator/BoxShadowGenerator'
 import PrivacyPolicy from './pages/privacy-policy/PrivacyPolicy'
 import GradientGenerator from './pages/generator/GradientGenerator'
+import ColorPaletteGenerator from './pages/tools/color-palette-generator/ColorPaletteGenerator'
 
 const allowedTypes = ['snippets', 'animations'];
 function AppRoutes() {
@@ -32,6 +33,7 @@ function AppRoutes() {
         <Route path="/about" element={<About />} />
         <Route path="/css-box-shadow-generator" element={<BoxShadowGenerator />} />
         <Route path="/css-gradient-generator" element={<GradientGenerator />} />
+        <Route path="/color-palette-generator" element={<ColorPaletteGenerator />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="*" element={<NotFound />} errorElement={<ErrorPage />} />
       </Routes>
